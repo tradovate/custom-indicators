@@ -186,7 +186,41 @@ module.exports = {
 };
 ```
 
-Now the indicator can be found in two sub-menus: `My Indicators` and `Moving Averages` under the name `My EMA`. By default, it will have a red color. The app uses [web colors](https://en.wikipedia.org/wiki/Web_colors). Other line properties that can be set in default style is `lineWidth` (in pixels), `opacity` (in percents), `lineStyle` (an index of style in the list of line styles in Indicator Editor). `schemeStyles` can be used to set default styles for `dark` and `light` mode of the app. `_` field is a placeholder for the plot name: an indicator can have multiple plots and each of them can have default styles. But our current indicator has just one plot without any particular name. As so, we use just `_`.
+Now the indicator can be found in two sub-menus: `My Indicators` and `Moving Averages` under the name `My EMA`. By default, it will have a red color. The app uses [web colors](https://en.wikipedia.org/wiki/Web_colors). Other line properties that can be set in default style are `lineWidth` (in pixels), `opacity` (in percents), `lineStyle` (an index of style in the list of line styles in Indicator Editor). `schemeStyles` can be used to set default styles for `dark` and `light` mode of the app. `_` field is a placeholder for the plot name: an indicator can have multiple plots and each of them can have default styles. But our current indicator has just one plot without any particular name. As so, we use just `_`.
+
+## Built-in tools
+
+A major part of the indicator can be reused by other indicators. The app includes `tools` folder with a set of such reusable classes and functions. Indicators can import it via `require` construction of Javascript.
+
+For example, our EMA can be rewritten as this one:
+
+```javascript
+const predef = require("./tools/predef");
+const EMA = require("./tools/EMA");
+
+class ema {
+    init() {
+        this.emaAlgo = EMA(this.props.period);
+    }
+
+    map(d) {
+        return this.emaAlgo(d.value());
+    }
+}
+
+module.exports = {
+    name: "exampleEma",
+    description: "My EMA",
+    calculator: ema,
+    params: {
+        period: predef.paramSpecs.period(10)
+    },
+    tags: ["My Indicators", predef.tags.MovingAverage],
+    schemeStyles: predef.styles.solidLine("red")
+};
+```
+
+Source codes of `tools` folder are open and available for viewing via Code Explorer.
 
 ## Double EMA
 
