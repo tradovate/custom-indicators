@@ -30,6 +30,8 @@ module.exports = {
 };
 ```
 
+![Simple Offset](/charts/SimpleOffset.png)
+
 The export here will tell the app to add an indicator with the unique name `exampleOffset` and calculations for this indicators are coded in class `offset`. The name plays a role of a machine-readable identifier. We don't expect it to be some nice looking text.
 
 To be a calculator, the class should implement at least one function: `map`. The function _maps_ or translates an input value to output one, that's it. The input value is an object that points to just one item in input series and the app iterates through the whole series one by one in some sort of a loop. Here is a pseudo-code that can give some clues what is going on under the hood:
