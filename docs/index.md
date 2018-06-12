@@ -389,9 +389,7 @@ module.exports = {
 };
 ```
 
-<p align="center">
 ![DNA-like Double EMA](/charts/DoubleEMA.png)
-</p>
 
 The plotter function above involves `tools/plotting` built-in module. The module contains a bunch of helper functions to simplify plotting. In our case, we use `x.get(item)` to retrieve X coordinate of the item. Note: as for now, the app uses `date` and more complex structures as a time (or X) coordinate, the plotter shouldn't expect a number there.
 
@@ -488,9 +486,7 @@ module.exports = {
 };
 ```
 
-<p align="center">
 ![Signaling ATR](/charts/SignalingATR.png)
-</p>
 
 `this.contractInfo` above is an object with details about the contract of the chart. The app assigns it to the indicator during construction.
 
