@@ -499,9 +499,11 @@ Let's assume we have an old mature indicator that we implemented with old good C
 For example, we have the next C function. It calculates a kind of median price of a bar, but with flexible weights for open, high/low prices.
 
 ```c
-extern "C" __declspec(dllexport) double __stdcall calculate(int barIndex, double openWeight, double highLowWeight, double open, double high, double low, double close) {
-		return (open * openWeight + high * highLowWeight + low * highLowWeight + close) / (openWeight + 2 * highLowWeight + 1.0);
-	};
+extern "C" __declspec(dllexport)
+double __stdcall calculate(int barIndex, double openWeight, double highLowWeight,
+  double open, double high, double low, double close) {
+    return (open * openWeight + high * highLowWeight + low * highLowWeight + close) / (openWeight + 2 * highLowWeight + 1.0);
+};
 ```
 
 Our indicator will call this function for each bar and pass the result to the app.
@@ -545,7 +547,9 @@ module.exports = {
                 // double calculate(int barIndex,
                 // double openWeight, double highLowWeight,
                 // double open, double high, double low, double close)
-                calculate: ['double', ['int', 'double', 'double', 'double', 'double', 'double', 'double']],
+                calculate: ['double',
+                  ['int', 'double', 'double',
+                  'double', 'double', 'double', 'double']],
             }
         }
     }
