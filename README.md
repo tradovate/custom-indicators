@@ -11,3 +11,8 @@ Home for Tradovate Trader custom indicators.
 `/tools`: helper classes and functions (available in Tradovate Trader)
 
 If you need to build a full-scale application that connects to Tradovate, please check our [Tradovate API](https://github.com/tradovate/api)
+
+## Third-party repositories
+  * https://github.com/blakeharv/tradovate-indicators
+
+  (let us know and we'll add a link to your indicators)
