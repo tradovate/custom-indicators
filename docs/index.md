@@ -640,6 +640,103 @@ module.exports = {
 
 Note: FFT is available since 1.180615 version of the app.
 
-## Spectrum
+## Spectrogram
+
+Our [Spectrogram](https://en.wikipedia.org/wiki/Spectrogram) has a lot in common with our previous indicator. Let's move out such pieces to a new helper module:
+
+```javascript
+const FFT = require("fft");
+
+function initialize(instance) {
+    const period = instance.props.period;
+    instance.fft = FFT(period);
+    instance.signal = new Array(period);
+    instance.zero = new Array(period);
+    for(let i=0; i<period; ++i) {
+        instance.zero[i] = 0.0;
+    }
+    instance.lastIndex = -1;
+}
+
+function updateSeries(instance, value, index) {
+    const period = instance.props.period;
+    if (index < period) {
+        instance.signal[period - index - 1] = value;
+    }
+    else {
+        if (instance.lastIndex < index) {
+            instance.signal.pop();
+            instance.signal.unshift(value);
+        }
+        else {
+            instance.signal[0] = value;
+        }
+    }
+
+    instance.lastIndex = index;
+
+    if (index >= period) {
+        const re = [].concat(instance.signal);
+        const im = [].concat(instance.zero);
+        instance.fft.fft1d(re, im);
+        return { re, im };
+    }
+}
+
+module.exports = {
+    initialize,
+    updateSeries,
+    tag: "Fourier Analysis"
+};
+```
+
+Let's save it with `fourierCommon.js` name.
+
+Refactored `fourierMA` will be reduced up to the next version:
+
+```javascript
+const predef = require("./tools/predef");
+const FFT = require("fft");
+const fourierCommon = require("./fourierCommon");
+
+class fourierMA {
+    init() {
+        fourierCommon.initialize(this);
+    }
+
+    map(d, index) {
+        const period = this.props.period;
+        const value = d.value();
+
+        const transform = fourierCommon.updateSeries(this, value, index);
+
+        if (transform) {
+            const re = transform.re;
+            const im = transform.im;
+
+            const startFreq = this.props.filterFreqStart;
+            for(let i=startFreq; i<period; ++i) {
+                re[i] = im[i] = 0.0;
+            }
+
+            this.fft.ifft1d(re, im);
+
+            return re[0];
+        }
+    }
+}
+
+module.exports = {
+    name: "fourierMA",
+    description: "Fourier MA",
+    calculator: fourierMA,
+    params: {
+        period: predef.paramSpecs.period(64),
+        filterFreqStart: predef.paramSpecs.period(16),
+    },
+    tags: [fourierCommon.tag],
+};
+```
+
 
 TODO:
