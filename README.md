@@ -2,4 +2,8 @@
 
 Home for Tradovate Trader custom indicators.
 
-See [Github Pages](https://tradovate.github.io/custom-indicators/)
+`/docs`: sources for [Github Pages with a step-by-step tutorial](https://tradovate.github.io/custom-indicators/)
+
+`/examples`: source codes for examples used in the tutorial
+
+If you need to build a full-scale application that connects to Tradovate, please check our [Tradovate API](https://github.com/tradovate/api)
