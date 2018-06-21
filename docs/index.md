@@ -568,7 +568,7 @@ DLL should be compiled to the same platform (32 or 64-bits) as the installed Tra
 
 Unfortunately, DLL import works on Windows' standalone platform only.
 
-DLL import is available since 1.180608 version of the app.
+DLL import is available since *1.180608* version of the app.
 
 ## Fourier Moving Average
 
@@ -645,8 +645,7 @@ module.exports = {
 
 ![FFT MA](/charts/FFTMA.png)
 
-
-Note: FFT is available since 1.180615 version of the app.
+Note: FFT is available since *1.180615* version of the app.
 
 ## Spectrogram
 
@@ -840,6 +839,8 @@ The same `lower` and `upper` fields are used as domain boundaries for the heatma
 ![Spectrogram](/charts/spectrogram.png)
 
 Note: vertical axis shows frequency as a divider of the period of the indicator. For example, `1` corresponds to the whole period, `2` - twice faster than indicator's period, etc.
+
+Note: heatmap is available since *1.180622* version of the app.
 
 ## Machine Learning
 
