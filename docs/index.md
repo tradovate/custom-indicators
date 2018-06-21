@@ -618,9 +618,11 @@ class fourierMA {
             const im = [].concat(this.zero);
             this.fft.fft1d(re, im);
 
+            const middle = period / 2 + 1;
             const startFreq = this.props.filterFreqStart;
-            for(let i=startFreq; i<period; ++i) {
+            for(let i=startFreq; i<middle; ++i) {
                 re[i] = im[i] = 0.0;
+                re[period - i] = im[period - i] = 0.0;
             }
             this.fft.ifft1d(re, im);
 
@@ -720,9 +722,11 @@ class fourierMA {
             const re = transform.re;
             const im = transform.im;
 
+            const middle = period / 2 + 1;
             const startFreq = this.props.filterFreqStart;
-            for(let i=startFreq; i<period; ++i) {
+            for(let i=startFreq; i<middle; ++i) {
                 re[i] = im[i] = 0.0;
+                re[period - i] = im[period - i] = 0.0;
             }
 
             this.fft.ifft1d(re, im);
