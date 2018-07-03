@@ -4,6 +4,8 @@ Please check the user guide how to access custom indicators in Tradovate Trader 
 
 [Here](https://tradovate.zendesk.com/hc/en-us/community/topics/115000511407-Custom-Indicators) you can find out some requests and discussions.
 
+[API Reference](indicator-module.md)
+
 ## Javascript
 
 Tradovate Trader is a cross-platform application: we run it as a standalone application on Windows, Mac OS, Android, iOS and via regular modern web browsers. To achieve it, our decision was to leverage a cross-platform programming language and SDK that would be available on all these platforms with no (ok, almost no) changes. Javascript is the perfect fit for this idea.
