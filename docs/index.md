@@ -2,7 +2,7 @@
 
 Please check the user guide how to access custom indicators in Tradovate Trader [here](https://tradovate.zendesk.com/hc/en-us/articles/115011665727-How-do-I-use-custom-indicators-in-Tradovate-)
 
-[Here](https://tradovate.zendesk.com/hc/en-us/community/topics/115000511407-Custom-Indicators) you can find out some requests and discussions.
+[Here](https://community.tradovate.com/c/custom-indicators/6) you can find out some requests and discussions.
 
 [API Reference](indicator-module.md)
 
