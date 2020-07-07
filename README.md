@@ -15,5 +15,6 @@ If you need to build a full-scale application that connects to Tradovate, please
 ## Third-party repositories
   * https://github.com/blakeharv/tradovate-indicators
   * https://github.com/paidtofade/tradovate-indicators
+  * https://github.com/sdmiami/tradovate-custom-indicators
 
   (let us know and we'll add a link to your indicators)
