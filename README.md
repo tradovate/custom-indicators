@@ -10,7 +10,9 @@ Home for Tradovate Trader custom indicators.
 
 `/tools`: helper classes and functions (available in Tradovate Trader)
 
-If you need to build a full-scale application that connects to Tradovate, please check our [Tradovate API](https://github.com/tradovate/api)
+`/typescript`: Typescript definitions for interfaces and classes
+
+If you need to build a full-scale application that connects to Tradovate, please request an invitation to our [Tradovate API](https://github.com/tradovate/api)
 
 ## Third-party repositories
   * https://github.com/blakeharv/tradovate-indicators

@@ -1,0 +1,91 @@
+{
+  "include": [
+    "./typescript/*.ts"
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "declaration": true,
+    "rootDir": "typescript",
+  },
+  "typedocOptions": {
+    "excludePrivate": true,
+    "excludeExternals": true,
+    "excludeReferences": true,
+    "media": "tutorial/media",
+    "entryPoints": ["./typescript/indicator.d.ts", "./typescript/calculator.d.ts", "./typescript/params.d.ts", 
+        "./typescript/dlls.d.ts", "./typescript/plots.d.ts", "./typescript/plotter.d.ts", "./typescript/canvas.d.ts",
+        "./typescript/scaler.d.ts", "./typescript/scheme-styles.d.ts", "./typescript/TimeSeries.d.ts"],
+    "theme": "./node_modules/typedoc-loopingz-theme/bin/default",
+    "out": "docs",
+    "readme": "./tutorial/index.md",
+    "source": [
+      {
+        "path": "https://github.com/tradovate/custom-indicators/tree/master/typescript/",
+        "line": "L"
+      }
+    ],
+    "name": "Tradovate Custom Indicators",
+    "pages": {
+      "groups": [
+        {
+          "title": "Tutorial",
+          "source": "./tutorial/",
+          "pages": [
+            {
+              "title": "Introduction",
+              "source": "index.md",
+            },
+            {
+              "title": "Simple Price Offset",
+              "source": "SimplePriceOffset.md"
+            },
+            {
+              "title": "Parameterized Price Offset",
+              "source": "ParameterizedPriceOffset.md"
+            },
+            {
+              "title": "Exponential Moving Average",
+              "source": "ExponentialMovingAverage.md"
+            },
+            {
+              "title": "Human-friendlier EMA",
+              "source": "HumanFriendlierEMA.md"
+            },
+            {
+              "title": "Built-in tools",
+              "source": "BuiltinTools.md"
+            },
+            {
+              "title": "Double EMA",
+              "source": "DoubleEMA.md"
+            },
+            {
+              "title": "Plotters",
+              "source": "Plotters.md"
+            },
+            {
+              "title": "Signaling Average True Range",
+              "source": "SignalingATR.md"
+            },
+            {
+              "title": "Blackbox DLL",
+              "source": "BlackboxDLL.md"
+            },
+            {
+              "title": "Fourier Moving Average",
+              "source": "FourierMovingAverage.md"
+            },
+            {
+              "title": "Spectrogram",
+              "source": "Spectrogram.md"
+            }
+          ]
+        }
+      ],
+      "reflectionNavigationTitle": "Modules",
+      "useMarkdownTitle": true,
+      "enableSearch": false,
+      "listInvalidPageLinks": true
+    }
+  }
+}
