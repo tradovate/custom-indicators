@@ -11,13 +11,13 @@
     "excludePrivate": true,
     "excludeExternals": true,
     "excludeReferences": true,
-    "media": "docs/media",
+    "media": "tutorial/media",
     "entryPoints": ["./typescript/indicator.d.ts", "./typescript/calculator.d.ts", "./typescript/params.d.ts", 
         "./typescript/dlls.d.ts", "./typescript/plots.d.ts", "./typescript/plotter.d.ts", "./typescript/canvas.d.ts",
         "./typescript/scaler.d.ts", "./typescript/scheme-styles.d.ts", "./typescript/TimeSeries.d.ts"],
     "theme": "./node_modules/typedoc-loopingz-theme/bin/default",
-    "out": "dist-doc",
-    "readme": "./docs/index.md",
+    "out": "docs",
+    "readme": "./tutorial/index.md",
     "source": [
       {
         "path": "https://github.com/tradovate/custom-indicators/tree/master/typescript/",
@@ -29,7 +29,7 @@
       "groups": [
         {
           "title": "Tutorial",
-          "source": "./docs/",
+          "source": "./tutorial/",
           "pages": [
             {
               "title": "Introduction",
