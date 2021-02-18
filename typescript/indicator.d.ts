@@ -63,4 +63,9 @@ interface Indicator {
     readonly scaler?: Scaler;
     /** Windows DLL import specification. Can be used in standalone Windows application only. */
     readonly dlls?: DLLs;
+    /** Additional requirements for input */
+    readonly requirements?: {
+        /** Chart's symbol history should include volume profiles */
+        readonly volumeProfiles?: boolean;
+    }
 }
