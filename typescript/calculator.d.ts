@@ -1,4 +1,5 @@
 import { BarInputEntity, InputEntity, TimeSeries } from "./TimeSeries";
+import { GraphicsResponse } from "./graphics/GraphicsResponse";
 
 /** 
  * Indicator's algorithm should implement this interface.   
@@ -61,8 +62,9 @@ class ema {
      * `number` returned value is identical to `{ value: number }` for a basic single line plot.
      * `undefined` returned value transaltes to an empty value in the output
      * Additionally, if the function returns the result as an object, it is possible to specify styling for this particular output item and/or for the corresponding candlestick. See details in [Signaling Average True Range](../pages/Tutorial/SignalingATR.html) tutorial.
+     * The function can return as well a `graphics` as a part of the result object. The {@linkcode GraphicsResponse} is a declarative way to create custom plotting.
     */
-    map(entity: InputEntity | BarInputEntity, index: number, inputSeries: TimeSeries): number | { [fieldName: string]: any } | undefined;
+    map(entity: InputEntity | BarInputEntity, index: number, inputSeries: TimeSeries): number | { [fieldName: string]: any } & { style?: { [fieldName: string]: { color: string | number } }, candlestick?: { color: string | number }, graphics?: GraphicsResponse } | undefined;
 
     /** The app calls the method with the value returned by {@linkcode map} to check if the indicator's algorithm considers to filter out some result values. The method should return `true` if the value should stay. The implementation is optional. */
     filter(entity: { [fieldName: string]: any }): boolean;
