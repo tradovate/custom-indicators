@@ -1,4 +1,4 @@
-export type ScaleUnit = 'du' | 'px' | 'gl';
+export type ScaleUnit = 'du' | 'px';
 
 export type ScaleBound = ScaleBoundValue | ExprScaleBound;
 

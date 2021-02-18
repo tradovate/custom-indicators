@@ -1,4 +1,4 @@
-import { LineStyle, FillStyle, ColorRGB } from "./Style";
+import { LineStyle, FillStyle, ColorRGB, TextStyle } from "./Style";
 import { ScaleBound } from "./Scale";
 
 export type DisplayObject = LineSegments | Shapes | ContourShapes | Instancing | Text | Container | Dots;
@@ -90,6 +90,17 @@ export interface Dot {
     readonly point: Point;
     readonly color: ColorRGB;
 }
+
+export interface Text {
+    readonly tag: 'Text';
+    readonly key: string;
+    readonly point: Point;
+    readonly text: string;
+    readonly style: TextStyle;
+    readonly textAlignment: TextAlignmentEnum;
+}
+
+export type TextAlignmentEnum = "none" | "centerAbove" | "centerMiddle" | "centerBelow" | "leftAbove" | "leftMiddle" | "leftBelow" | "rightAbove" | "rightMiddle" | "rightBelow";
 
 export interface Container {
     readonly tag: 'Container';
