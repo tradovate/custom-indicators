@@ -276,6 +276,39 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface LineSegments</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p> This is a <code>DisplayObject</code>. It represents a group of one or more Line objects.</p>
+						<pre><code class="language-javascript"><span style="color: #008000">//within a the graphics items array, displays an infinite horizontal</span>
+<span style="color: #008000">//line at the 3800 price.</span>
+<span style="color: #000000">...</span>
+<span style="color: #000000"> {</span>
+<span style="color: #000000">     tag: </span><span style="color: #A31515">&#039;LineSegments&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     key: </span><span style="color: #A31515">&#039;lines&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     lines: [</span>
+<span style="color: #000000">         {</span>
+<span style="color: #000000">             </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Line&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">a:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">),</span>
+<span style="color: #000000">                 </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">3800</span><span style="color: #000000">),</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">             </span><span style="color: #001080">b:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">),</span>
+<span style="color: #000000">                 </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">3800</span><span style="color: #000000">)</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">             </span><span style="color: #001080">infiniteStart:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">infiniteEnd:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     ],</span>
+<span style="color: #000000">     lineStyle: {</span>
+<span style="color: #000000">         lineWidth: </span><span style="color: #098658">3</span><span style="color: #000000">,</span>
+<span style="color: #000000">         color: </span><span style="color: #A31515">&#039;#f00&#039;</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">...</span>
+</code></pre>
+					</div>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -315,44 +348,59 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L8">
-									graphics/DisplayObject.d.ts:8
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L59">
+									graphics/DisplayObject.d.ts:59
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The graphic element&#39;s render key, like an HTML <code>id</code> attribute.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="linestyle" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">line<wbr>Style<span class="tsd-signature-symbol">:</span> <a href="graphics_style.linestyle.html" class="tsd-signature-type">LineStyle</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L10">
-									graphics/DisplayObject.d.ts:10
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L63">
+									graphics/DisplayObject.d.ts:63
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p><code>LineStyle</code> object representing the rendered group&#39;s styles.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="lines" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">lines<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">readonly Line[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L9">
-									graphics/DisplayObject.d.ts:9
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L61">
+									graphics/DisplayObject.d.ts:61
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An array of <code>Line</code> objects to be rendered.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"LineSegments"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L7">
-									graphics/DisplayObject.d.ts:7
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L57">
+									graphics/DisplayObject.d.ts:57
 								</a>
 							</li>
 						</ul>

@@ -279,6 +279,47 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Rectangle</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>Shape</code> primitive. Defines an instance of a Rectangle shape for use in the Shapes or ContourShapes <code>primitives</code> value.
+						Usage:</p>
+						<p>``` javascript
+							// Inside a calculator&#39;s <code>map</code> function, this particular definition will draw
+							// red 24x24px squares centered at { x: index, y: value } of each rendered bar
+							...
+							{
+							graphics: {
+							items: [
+							{
+							tag: &quot;Shapes&quot;,
+							key: &#39;rects&#39;,
+							//the rectangle is a primitve
+							primitives: [
+							{
+							tag: &#39;Rectangle&#39;,
+							position: {
+							x: du(d.index()),
+							y: du(d.value()),
+							}
+							size: {
+							height: px(24),
+							width: px(24)
+							}
+							}
+							],
+							fillStyle: {
+							color: &#39;#f00&#39;
+							}
+							}
+							]
+							}
+							}
+						...</p>
+					</div>
+					</div><div class="tsd-comment tsd-typography tsd-comment-text">
+					<pre><code>
+</code></pre>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -321,8 +362,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L42">
-									graphics/DisplayObject.d.ts:42
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L244">
+									graphics/DisplayObject.d.ts:244
 								</a>
 							</li>
 						</ul>
@@ -333,8 +374,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L41">
-									graphics/DisplayObject.d.ts:41
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L243">
+									graphics/DisplayObject.d.ts:243
 								</a>
 							</li>
 						</ul>
@@ -345,8 +386,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L39">
-									graphics/DisplayObject.d.ts:39
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L241">
+									graphics/DisplayObject.d.ts:241
 								</a>
 							</li>
 						</ul>
@@ -357,8 +398,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L40">
-									graphics/DisplayObject.d.ts:40
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L242">
+									graphics/DisplayObject.d.ts:242
 								</a>
 							</li>
 						</ul>
@@ -369,8 +410,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L38">
-									graphics/DisplayObject.d.ts:38
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L239">
+									graphics/DisplayObject.d.ts:239
 								</a>
 							</li>
 						</ul>

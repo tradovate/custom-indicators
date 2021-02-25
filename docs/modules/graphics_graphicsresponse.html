@@ -218,12 +218,47 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/GraphicsResponse.d.ts#L7">
-									graphics/GraphicsResponse.d.ts:7
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/GraphicsResponse.d.ts#L56">
+									graphics/GraphicsResponse.d.ts:56
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>A type that describes the intersection between <code>DisplayObject</code>, <code>AxesOrigin</code>, and a boolean value representing
+							whether or not to render in the global scope.</p>
+							<pre><code class="language-javascript"><span style="color: #000000"> ...</span>
+<span style="color: #008000">//in this example map returns a global text label at the last bar&#039;s</span>
+<span style="color: #008000">//index on the X-axis and 40 pixels above the price 3850 in the Y-axis.</span>
+<span style="color: #000000"> </span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">) {</span>
+<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #001080">graphics:</span><span style="color: #000000"> </span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">isLast</span><span style="color: #000000">() &amp;&amp; {</span>
+<span style="color: #000000">             </span><span style="color: #001080">items:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                 {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Text&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                     </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;myLabel&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                     </span><span style="color: #001080">point:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                         </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                         </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">3850</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">40</span><span style="color: #000000">))</span>
+<span style="color: #000000">                     },</span>
+<span style="color: #000000">                     </span><span style="color: #001080">text:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;-&gt; 3850&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                     </span><span style="color: #001080">style:</span><span style="color: #000000"> { </span><span style="color: #001080">fill:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#f00&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">                     </span><span style="color: #001080">textAlignment:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;centerMiddle&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                     </span><span style="color: #001080">global:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #008000">//&lt;- indicates this is a globally-scoped object</span>
+<span style="color: #000000">                     </span><span style="color: #001080">origin:</span><span style="color: #000000"> {     </span><span style="color: #008000">//&lt;- indicates (0,0) is (right, top) oriented</span>
+<span style="color: #000000">                         </span><span style="color: #001080">cs:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;grid&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                         </span><span style="color: #001080">h:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;right&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                         </span><span style="color: #001080">v:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;top&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                     }</span>
+<span style="color: #000000">                 }</span>
+<span style="color: #000000">             ]</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+</code></pre>
+						</div>
+					</div>
 			</section></section>
 			<!--{&quot;options&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;tsconfig&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
 			<footer class="with-border-bottom">

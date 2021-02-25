@@ -276,6 +276,47 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface RoundedRectangle</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>Shape</code> primitive. Defines an instance of a <code>RoundedRectangle</code> shape for use in the <code>Shapes</code> or <code>ContourShapes</code> <code>primitives</code> value.
+						Usage:</p>
+						<p>``` javascript
+							//within a map function&#39;s return object. This will draw a red rounded rect centered at each rendered
+							//bar&#39;s value and index.
+							...
+							{
+							graphics: {
+							items: [
+							{
+							tag: &quot;Shapes&quot;,
+							key: &#39;roundRects&#39;,
+							//the rounded rect is a primitve
+							primitives: [
+							{
+							tag: &#39;RoundedRectangle&#39;,
+							position: {
+							x: du(d.index()),
+							y: du(d.value()),
+							}
+							size: {
+							height: px(16),
+							width: px(24)
+							}
+							}
+							],
+							fillStyle: {
+							color: &#39;#f00&#39;
+							}
+							}
+							]
+							}
+							}
+						...</p>
+					</div>
+					</div><div class="tsd-comment tsd-typography tsd-comment-text">
+					<pre><code>
+</code></pre>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -315,44 +356,59 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L59">
-									graphics/DisplayObject.d.ts:59
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L375">
+									graphics/DisplayObject.d.ts:375
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The <code>Point</code> origin of this object.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="radius" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">radius<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L61">
-									graphics/DisplayObject.d.ts:61
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L379">
+									graphics/DisplayObject.d.ts:379
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>A <code>number</code> describing the radius of this object&#39;s corners in pixels.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="size" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <a href="graphics_displayobject.size.html" class="tsd-signature-type">Size</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L60">
-									graphics/DisplayObject.d.ts:60
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L377">
+									graphics/DisplayObject.d.ts:377
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The <code>Size</code> object that describes this object&#39;s dimensions.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"RoundedRectangle"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L58">
-									graphics/DisplayObject.d.ts:58
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L373">
+									graphics/DisplayObject.d.ts:373
 								</a>
 							</li>
 						</ul>

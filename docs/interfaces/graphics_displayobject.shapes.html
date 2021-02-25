@@ -276,6 +276,31 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Shapes</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>DisplayObject</code>. Represents a group of one or more solid primitive <code>Shape</code> objects.</p>
+						<pre><code class="language-javascript"><span style="color: #008000">//within the graphics items array, displays a filled circle 60px above each bar</span>
+<span style="color: #000000">...</span>
+<span style="color: #000000"> {</span>
+<span style="color: #000000">     tag: </span><span style="color: #A31515">&quot;Shapes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     key: </span><span style="color: #A31515">&#039;circs&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     primitives: [</span>
+<span style="color: #000000">         {</span>
+<span style="color: #000000">             </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Circle&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">radius:</span><span style="color: #000000"> </span><span style="color: #098658">10</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">center:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">)),</span>
+<span style="color: #000000">                 </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">60</span><span style="color: #000000">)),</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">         },</span>
+<span style="color: #000000">     ],</span>
+<span style="color: #000000">     fillStyle: {</span>
+<span style="color: #000000">         color: </span><span style="color: #A31515">&quot;#5c5&quot;</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+</code></pre>
+					</div>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -315,44 +340,59 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L25">
-									graphics/DisplayObject.d.ts:25
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L135">
+									graphics/DisplayObject.d.ts:135
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p><code>FillStyle</code> object to define the color that this group of shapes will be rendered.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="key" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L23">
-									graphics/DisplayObject.d.ts:23
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L131">
+									graphics/DisplayObject.d.ts:131
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The graphic element&#39;s render key, like an HTML <code>id</code> attribute.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="primitives" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">primitives<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">readonly Shape[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L24">
-									graphics/DisplayObject.d.ts:24
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L133">
+									graphics/DisplayObject.d.ts:133
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An array of <code>Shape</code> objects associated with this <code>Shapes</code> group.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Shapes"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L22">
-									graphics/DisplayObject.d.ts:22
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L129">
+									graphics/DisplayObject.d.ts:129
 								</a>
 							</li>
 						</ul>

@@ -273,6 +273,47 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Ellipse</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>Shape</code> primitive. Defines an instance of an <code>Ellipse</code> shape for use in the <code>Shapes</code> or <code>ContourShapes</code> <code>primitives</code> value.
+						Usage:</p>
+						<p>``` javascript
+							//within a map function&#39;s return object. This will draw a red ellipse centered at each rendered
+							//bar&#39;s value and index.
+							...
+							{
+							graphics: {
+							items: [
+							{
+							tag: &quot;Shapes&quot;,
+							key: &#39;ellipses&#39;,
+							//the ellipse is a primitve
+							primitives: [
+							{
+							tag: &#39;Ellipse&#39;,
+							position: {
+							x: du(d.index()),
+							y: du(d.value()),
+							}
+							size: {
+							height: px(18),
+							width: px(24)
+							}
+							}
+							],
+							fillStyle: {
+							color: &#39;#f00&#39;
+							}
+							}
+							]
+							}
+							}
+						...</p>
+					</div>
+					</div><div class="tsd-comment tsd-typography tsd-comment-text">
+					<pre><code>
+</code></pre>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -309,32 +350,42 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L47">
-									graphics/DisplayObject.d.ts:47
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L288">
+									graphics/DisplayObject.d.ts:288
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>origin point of the ellipse</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="size" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <a href="graphics_displayobject.size.html" class="tsd-signature-type">Size</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L48">
-									graphics/DisplayObject.d.ts:48
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L290">
+									graphics/DisplayObject.d.ts:290
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>size of the ellipse</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Ellipse"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L46">
-									graphics/DisplayObject.d.ts:46
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L286">
+									graphics/DisplayObject.d.ts:286
 								</a>
 							</li>
 						</ul>

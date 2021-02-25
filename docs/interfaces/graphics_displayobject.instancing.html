@@ -276,6 +276,39 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Instancing</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>DisplayObject</code>. Declares a one or more shapes as a shared instance. Members of the <code>instances</code>
+						array will be rendered as shared instances. (Currently supports only <code>Rectangle</code>)</p>
+						<pre><code class="language-javascript"><span style="color: #000000"> </span><span style="color: #008000">//inside map&#039;s return object. This example will render an orange rect</span>
+<span style="color: #000000"> </span><span style="color: #008000">//extending 30px above each bar, centered at the bar. Each render</span>
+<span style="color: #000000"> </span><span style="color: #008000">//will use instance sharing.</span>
+<span style="color: #000000">...</span>
+<span style="color: #000000"> graphics: {</span>
+<span style="color: #000000">     items: [</span>
+<span style="color: #000000">         {</span>
+<span style="color: #000000">             </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Instancing&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;shades&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">instances:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                 {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">position:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                         </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">min</span><span style="color: #000000">(</span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">2.5</span><span style="color: #000000">), </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">0.25</span><span style="color: #000000">))),</span>
+<span style="color: #000000">                         </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">())</span>
+<span style="color: #000000">                     },</span>
+<span style="color: #000000">                     </span><span style="color: #001080">size:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                         </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #795E26">min</span><span style="color: #000000">(</span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">), </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #098658">0.5</span><span style="color: #000000">)),</span>
+<span style="color: #000000">                         </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">30</span><span style="color: #000000">)</span>
+<span style="color: #000000">                     },</span>
+<span style="color: #000000">                     </span><span style="color: #001080">color:</span><span style="color: #000000"> { </span><span style="color: #001080">r:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">g:</span><span style="color: #000000"> </span><span style="color: #098658">0.5</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">0.25</span><span style="color: #000000"> }</span>
+<span style="color: #000000">                 }</span>
+<span style="color: #000000">             ],</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     ]</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">...</span>
+</code></pre>
+					</div>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -315,44 +348,59 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L72">
-									graphics/DisplayObject.d.ts:72
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L473">
+									graphics/DisplayObject.d.ts:473
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An array of <code>Instance</code> objects that describes what shapes will share instances.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="key" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L71">
-									graphics/DisplayObject.d.ts:71
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L471">
+									graphics/DisplayObject.d.ts:471
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The graphic element&#39;s render key, like an HTML <code>id</code> attribute.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="primitive" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">primitive<span class="tsd-signature-symbol">:</span> <a href="../modules/graphics_displayobject.html#shape" class="tsd-signature-type">Shape</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L73">
-									graphics/DisplayObject.d.ts:73
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L475">
+									graphics/DisplayObject.d.ts:475
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Optional. A <code>Shape</code> primitive to use. (Currently only supports <code>Rectangle</code>.)</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Instancing"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L70">
-									graphics/DisplayObject.d.ts:70
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L469">
+									graphics/DisplayObject.d.ts:469
 								</a>
 							</li>
 						</ul>

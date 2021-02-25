@@ -344,48 +344,113 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L4">
-									graphics/DisplayObject.d.ts:4
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L22">
+									graphics/DisplayObject.d.ts:22
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>A type that represents graphic objects. Used in <code>map</code>&#39;s return object&#39;s <code>graphics.items</code> array property.</p>
+							<pre><code class="language-javascript"><span style="color: #000000"> ...</span>
+<span style="color: #008000">//we can tell map to render graphics using the graphics property in</span>
+<span style="color: #008000">//map&#039;s return object:</span>
+<span style="color: #000000"> </span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">) {</span>
+<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #001080">graphics:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">             </span><span style="color: #001080">items:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                 </span><span style="color: #008000">//Our DisplayObjects go here.</span>
+<span style="color: #000000">             ]</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000">...</span>
+</code></pre>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="shape" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">Shape<span class="tsd-signature-symbol">:</span> <a href="../interfaces/graphics_displayobject.rectangle.html" class="tsd-signature-type">Rectangle</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/graphics_displayobject.circle.html" class="tsd-signature-type">Circle</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/graphics_displayobject.roundedrectangle.html" class="tsd-signature-type">RoundedRectangle</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/graphics_displayobject.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/graphics_displayobject.ellipse.html" class="tsd-signature-type">Ellipse</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L35">
-									graphics/DisplayObject.d.ts:35
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L198">
+									graphics/DisplayObject.d.ts:198
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>A type that represents the union of all primitive <code>Shape</code> object types. For use in <code>Shapes</code> or <code>ContourShapes</code>
+							<code>DisplayObject</code>s rendered <code>shapes</code> array.</p>
+						</div>
+						</div><div class="tsd-comment tsd-typography tsd-comment-text">
+						<pre><code class="language-javascript"><span style="color: #000000"> ...</span>
+<span style="color: #000000"> {</span>
+<span style="color: #000000">     graphics: {</span>
+<span style="color: #000000">         items: [</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Shapes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;myShapes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #001080">primitives:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                     </span><span style="color: #008000">//Shapes go here.</span>
+<span style="color: #000000">                 ]</span>
+<span style="color: #000000">                 </span><span style="color: #001080">fillStyle</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#f00&#039;</span>
+<span style="color: #000000">                 }</span>
+<span style="color: #000000">             }</span>
+<span style="color: #000000">         ]</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000"> ...</span>
+</code></pre>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="textalignmentenum" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">Text<wbr>Alignment<wbr>Enum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"centerAbove"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"centerMiddle"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"centerBelow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"leftAbove"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"leftMiddle"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"leftBelow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rightAbove"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rightMiddle"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rightBelow"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L103">
-									graphics/DisplayObject.d.ts:103
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L616">
+									graphics/DisplayObject.d.ts:616
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Type union over all valid text alignment strings.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="transformop" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">Transform<wbr>Op<span class="tsd-signature-symbol">:</span> <a href="../interfaces/graphics_displayobject.translate.html" class="tsd-signature-type">Translate</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/graphics_displayobject.zindex.html" class="tsd-signature-type">ZIndex</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L122">
-									graphics/DisplayObject.d.ts:122
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L711">
+									graphics/DisplayObject.d.ts:711
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Type union over <code>Translate</code> and <code>ZIndex</code>. Used to describe a transformation operation
+							on a <code>Container</code> <code>DisplayObject</code>.</p>
+							<pre><code class="language-typescript"><span style="color: #000000"> </span><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">Translate</span><span style="color: #000000"> {</span>
+<span style="color: #000000">     readonly tag: &#039;Translate&#039;;</span>
+<span style="color: #000000">     </span><span style="color: #001080">readonly</span><span style="color: #000000"> vector: </span><span style="color: #001080">Vector2</span><span style="color: #000000">;</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000"> </span><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">ZIndex</span><span style="color: #000000"> {</span>
+<span style="color: #000000">     readonly tag: &#039;ZIndex&#039;;</span>
+<span style="color: #000000">     </span><span style="color: #001080">readonly</span><span style="color: #000000"> zIndex: </span><span style="color: #001080">number</span><span style="color: #000000">;</span>
+<span style="color: #000000"> }</span>
+</code></pre>
+						</div>
+					</div>
 			</section></section>
 			<!--{&quot;options&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;tsconfig&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
 			<footer class="with-border-bottom">

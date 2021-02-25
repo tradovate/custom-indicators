@@ -276,6 +276,55 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Dots</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>DisplayObject</code>. Represents an array of WebGL dots.</p>
+						<pre><code class="language-javascript"><span style="color: #000000">...</span>
+<span style="color: #008000">//in map&#039;s return object. this example will draw a colorful square of dots above each bar.</span>
+<span style="color: #000000">graphics: {</span>
+<span style="color: #000000">     items: [</span>
+<span style="color: #000000">         </span><span style="color: #001080">tag</span><span style="color: #000000">: </span><span style="color: #A31515">&#039;Dots&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">key</span><span style="color: #000000">: </span><span style="color: #A31515">&#039;myDots&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">dots</span><span style="color: #000000">: [</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">point:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                     </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">))</span>
+<span style="color: #000000">                 },</span>
+<span style="color: #000000">                 </span><span style="color: #001080">color:</span><span style="color: #000000"> { </span><span style="color: #001080">r:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">g:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">point:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">6</span><span style="color: #000000">)),</span>
+<span style="color: #000000">                     </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">94</span><span style="color: #000000">))</span>
+<span style="color: #000000">                 },</span>
+<span style="color: #000000">                 </span><span style="color: #001080">color:</span><span style="color: #000000"> { </span><span style="color: #001080">r:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">g:</span><span style="color: #000000"> </span><span style="color: #098658">.5</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">point:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                     </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">94</span><span style="color: #000000">))</span>
+<span style="color: #000000">                 },</span>
+<span style="color: #000000">                 </span><span style="color: #001080">color:</span><span style="color: #000000"> { </span><span style="color: #001080">r:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">g:</span><span style="color: #000000"> </span><span style="color: #098658">.5</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">.5</span><span style="color: #000000"> }</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">point:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">6</span><span style="color: #000000">)),</span>
+<span style="color: #000000">                     </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">op</span><span style="color: #000000">(</span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()), </span><span style="color: #A31515">&#039;-&#039;</span><span style="color: #000000">, </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">))</span>
+<span style="color: #000000">                 },</span>
+<span style="color: #000000">                 </span><span style="color: #001080">color:</span><span style="color: #000000"> { </span><span style="color: #001080">r:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">g:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> }</span>
+<span style="color: #000000">             },</span>
+<span style="color: #000000">         ],</span>
+<span style="color: #000000">         </span><span style="color: #001080">style</span><span style="color: #000000">: {</span>
+<span style="color: #000000">             </span><span style="color: #001080">lineWidth:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">,</span>
+<span style="color: #000000">             </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#f00&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">...</span>
+</code></pre>
+					</div>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -315,44 +364,60 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L85">
-									graphics/DisplayObject.d.ts:85
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L541">
+									graphics/DisplayObject.d.ts:541
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An array of <code>Dot</code> objects that describe the dots in this drawing.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="key" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L84">
-									graphics/DisplayObject.d.ts:84
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L539">
+									graphics/DisplayObject.d.ts:539
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The graphic element&#39;s render key, like an HTML <code>id</code> attribute.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="style" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <a href="graphics_style.linestyle.html" class="tsd-signature-type">LineStyle</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L86">
-									graphics/DisplayObject.d.ts:86
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L546">
+									graphics/DisplayObject.d.ts:546
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The style of the dots as a <code>LineStyle</code> object. Individual dot colors override the
+							color portion of this value</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Dots"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L83">
-									graphics/DisplayObject.d.ts:83
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L537">
+									graphics/DisplayObject.d.ts:537
 								</a>
 							</li>
 						</ul>

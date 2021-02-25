@@ -270,6 +270,56 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface Polygon</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>This is a <code>Shape</code> primitive. Defines an instance of a <code>Polygon</code> shape for use in the <code>Shapes</code> or <code>ContourShapes</code> <code>primitives</code> value.
+						Usage:</p>
+						<p>``` javascript
+							//within a map function&#39;s return object. This will draw a red triangle rect at each rendered
+							//bar&#39;s value and index.
+							...
+							{
+							graphics: {
+							items: [
+							{
+							tag: &quot;Shapes&quot;,
+							key: &#39;tris&#39;,
+							//the polygon is a primitve
+							primitives: [
+							{
+							tag: &#39;Polygon&#39;,
+							points: [
+							//top
+							{
+							x: du(d.index()),
+							y: op(du(d.value()), &#39;-&#39;, px(4))
+							},
+							//right
+							{
+							x: op(du(d.index()), &#39;+&#39;, px(4)),
+							y: du(d.value())
+							},
+							//left
+							{
+							x: op(du(d.index()), &#39;-&#39;, px(4)),
+							y: du(d.value())
+							}
+							]
+							}
+							],
+							fillStyle: {
+							color: &#39;#f00&#39;
+							}
+							}
+							]
+							}
+							}
+						...</p>
+					</div>
+					</div><div class="tsd-comment tsd-typography tsd-comment-text">
+					<pre><code>
+</code></pre>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -303,20 +353,25 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L66">
-									graphics/DisplayObject.d.ts:66
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L432">
+									graphics/DisplayObject.d.ts:432
 								</a>
 							</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An array of <code>Point</code> objects that describe this <code>Polygon</code>.</p>
+						</div>
+					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Polygon"</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L65">
-									graphics/DisplayObject.d.ts:65
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L430">
+									graphics/DisplayObject.d.ts:430
 								</a>
 							</li>
 						</ul>
