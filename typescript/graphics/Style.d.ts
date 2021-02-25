@@ -1,5 +1,11 @@
 /**
  * Represents the style used to render a line.
+ * ```javascript
+ *  const my3pxLine = {
+ *      lineWidth: 3,
+ *      color: 'red',
+ *  }
+ * ```
  */
 export interface LineStyle {
     /** width in pixels of the rendered line */
@@ -25,10 +31,16 @@ export enum DashLineStyle {
 
 /** 
  * Defines a `Shapes` object's fill-style. 
+ * ```javascript
+ *  const halfRed = {
+ *      color: 'red',
+ *      opacity: 0.5,
+ *  }
+ * ```
  */
 export interface FillStyle {
     /** 
-     * the fill color. Can be a Web Color string in either named (`'red'`)
+     * Fill color described as a hexadecimal or named web color string.
      */
     readonly color: Color;
     /** number value between 0 and 1, where 1 represents 100% opacity. */
@@ -61,7 +73,10 @@ export interface FontStyle {
 }
 
 /**
- * Definition for Text fill style.
+ * Definition for a `Text` `DisplayObject`'s fill style.
+ * ```javascript
+ *  const red = { color: '#f00' }
+ * ```
  */
 export interface TextStyle extends FontStyle {
     readonly fill?: Color;
@@ -69,11 +84,18 @@ export interface TextStyle extends FontStyle {
 
 /**
  * A hexadecimal or named web color string
+ * ```javascript
+ *  const orange = '#f90',
+ *        red    = "red"
+ * ```
  */
 export type Color = number | string;
 
 /**
  * An object that represents RGB color.
+ * ```javascript
+ *  const red = { r: 1, g: 0, b: 0 }
+ * ```
  */
 export interface ColorRGB {
     readonly r: number;

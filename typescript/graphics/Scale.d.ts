@@ -7,7 +7,7 @@ export type ScaleUnit = 'du' | 'px';
 /**
  * An object that represents a value in units of either 'px' or 'du'. In the Code Explorer, 
  * we can use the `px(value)` or `du(value)` functions. To create dynamic values, we can use the
- * `op(a, operator, b)` to create mixed values:
+ * `op(a, operator, b)`:
  * ```javascript
  * //creates a point 60 pixels above the price 3800.50.
  * const myMixedValue = op(du(3800.50), '-', px(60))
