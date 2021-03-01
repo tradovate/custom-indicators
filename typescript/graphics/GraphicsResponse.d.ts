@@ -1,7 +1,7 @@
 import { DisplayObject } from "./DisplayObject";
 
 /**
- * The `graphics` object portion of the `map` function's object return. 
+ * The `graphics` object portion of the `map` function's object return.
  * ```javascript
  *  map(d) {
  *      return {
@@ -12,24 +12,24 @@ import { DisplayObject } from "./DisplayObject";
  *          }
  *      }
  *  }
- * ```  
+ * ```
  */
 export interface GraphicsResponse {
     /** Optional. The array of `GraphicsObject`s to render. */
     readonly items?: readonly GraphicsObject[];
 }
-    
+
 /**
  * A type that describes the intersection between `DisplayObject`, `AxesOrigin`, and a boolean value representing
  * whether or not to render in the global scope.
  * ```javascript
  *  ...
- * //in this example map returns a global text label at the last bar's 
- * //index on the X-axis and 40 pixels above the price 3850 in the Y-axis. 
+ * //in this example map returns a global text label at the last bar's
+ * //index on the X-axis and 40 pixels above the price 3850 in the Y-axis.
  *  map(d) {
  *      return {
  *          graphics: d.isLast() && {
- *              items: [ 
+ *              items: [
  *                  {
  *                      tag: 'Text',
  *                      key: 'myLabel',
@@ -53,7 +53,23 @@ export interface GraphicsResponse {
  *  }
  * ```
  */
-export type GraphicsObject = DisplayObject & { readonly origin?: AxesOrigin; readonly global?: boolean; };
+export type GraphicsObject = DisplayObject & GraphicsScope;
+
+export type GraphicsScope = {
+    readonly origin?: AxesOrigin;
+    readonly global?: boolean;
+    readonly conditions?: VisibilityConditions;
+};
+
+export type ScaleRange = {
+    readonly min?: number;
+    readonly max?: number;
+};
+
+export type VisibilityConditions = {
+    scaleRangeX?: ScaleRange;
+    scaleRangeY?: ScaleRange;
+};
 
 /**
  * An interface that describes the position and scale type of a `GraphicsObject`'s render origin. Basically,
