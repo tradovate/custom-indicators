@@ -180,6 +180,15 @@
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
 						<a href="graphics_graphicsresponse.html#graphicsobject" class="tsd-kind-icon">Graphics<wbr>Object</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
+						<a href="graphics_graphicsresponse.html#graphicsscope" class="tsd-kind-icon">Graphics<wbr>Scope</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
+						<a href="graphics_graphicsresponse.html#scalerange" class="tsd-kind-icon">Scale<wbr>Range</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
+						<a href="graphics_graphicsresponse.html#visibilityconditions" class="tsd-kind-icon">Visibility<wbr>Conditions</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -205,6 +214,15 @@
 								<div class="tsd-kind-type-alias tsd-parent-kind-module"><a href="graphics_graphicsresponse.html#graphicsobject"
 									class="tsd-kind-icon">GraphicsObject</a>
 								</div>
+								<div class="tsd-kind-type-alias tsd-parent-kind-module"><a href="graphics_graphicsresponse.html#graphicsscope"
+									class="tsd-kind-icon">GraphicsScope</a>
+								</div>
+								<div class="tsd-kind-type-alias tsd-parent-kind-module"><a href="graphics_graphicsresponse.html#scalerange"
+									class="tsd-kind-icon">ScaleRange</a>
+								</div>
+								<div class="tsd-kind-type-alias tsd-parent-kind-module"><a href="graphics_graphicsresponse.html#visibilityconditions"
+									class="tsd-kind-icon">VisibilityConditions</a>
+								</div>
 							</div>
 						</section>
 					</div>
@@ -214,7 +232,7 @@
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="graphicsobject" class="tsd-anchor"></a>
-					<div class="tsd-signature tsd-kind-icon">Graphics<wbr>Object<span class="tsd-signature-symbol">:</span> <a href="graphics_displayobject.html#displayobject" class="tsd-signature-type">DisplayObject</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">Graphics<wbr>Object<span class="tsd-signature-symbol">:</span> <a href="graphics_displayobject.html#displayobject" class="tsd-signature-type">DisplayObject</a><span class="tsd-signature-symbol"> &amp; </span><a href="graphics_graphicsresponse.html#graphicsscope" class="tsd-signature-type">GraphicsScope</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
@@ -258,6 +276,78 @@
 <span style="color: #000000"> }</span>
 </code></pre>
 						</div>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="graphicsscope" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">Graphics<wbr>Scope<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/GraphicsResponse.d.ts#L58">
+									graphics/GraphicsResponse.d.ts:58
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> conditions<span class="tsd-signature-symbol">?: </span><a href="graphics_graphicsresponse.html#visibilityconditions" class="tsd-signature-type">VisibilityConditions</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> global<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> origin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/graphics_graphicsresponse.axesorigin.html" class="tsd-signature-type">AxesOrigin</a></h5>
+							</li>
+						</ul>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="scalerange" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">Scale<wbr>Range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/GraphicsResponse.d.ts#L64">
+									graphics/GraphicsResponse.d.ts:64
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> max<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> min<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="visibilityconditions" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">Visibility<wbr>Conditions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/GraphicsResponse.d.ts#L69">
+									graphics/GraphicsResponse.d.ts:69
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> scale<wbr>RangeX<span class="tsd-signature-symbol">?: </span><a href="graphics_graphicsresponse.html#scalerange" class="tsd-signature-type">ScaleRange</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> scale<wbr>RangeY<span class="tsd-signature-symbol">?: </span><a href="graphics_graphicsresponse.html#scalerange" class="tsd-signature-type">ScaleRange</a></h5>
+							</li>
+						</ul>
 					</div>
 			</section></section>
 			<!--{&quot;options&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;tsconfig&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
