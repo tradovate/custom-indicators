@@ -80,6 +80,10 @@
             {
               "title": "Spectrogram",
               "source": "Spectrogram.md"
+            },
+            {
+              "title": "Graphics",
+              "source": "Graphics.md"
             }
           ]
         }
