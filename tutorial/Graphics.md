@@ -281,5 +281,6 @@ part of the return value of our tracker's `push` function.
     }            
 //...
 ```
+Rendering our indicator should yield this result at big pixel-to-domain ratios:  
 
 ![A bit of cyan text indicating the difference between the value at the last index and the bar's value.](../../media/Graphics3.png)
