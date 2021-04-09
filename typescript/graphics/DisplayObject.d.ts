@@ -588,7 +588,7 @@ export interface Dot {
  *                          y: op(du(3850), '-', px(40))
  *                      },
  *                      text: '-> 3850',
- *                      style: { fill: '#f00' },
+ *                      style: { fontSize: 18, fontWeight: "bold", fill: '#f00' },
  *                      textAlignment: 'centerMiddle',
  *                      global: true //<- indicates this is a globally-scoped object
  *                  }
