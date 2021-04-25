@@ -110,8 +110,6 @@ module.exports = {
 };
 ```
  
-![DNA-like Double EMA](../../media/DoubleEMA.png)
- 
 The plotter function above involves the {@linkcode plotting} built-in module. The module contains a bunch of helper functions to simplify plotting. In our case, we use {@linkcode plotting.x.get} to retrieve the X coordinate of the item.
  
 The function plots each line with red or green color and tells the app to draw them with half opacity and width equals to half-space between bars ({@linkcode plotting.x.relativeWidth}.
