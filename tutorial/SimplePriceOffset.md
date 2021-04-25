@@ -17,8 +17,6 @@ module.exports = {
 };
 ```
  
-![Simple Offset](../../media/SimpleOffset.png)
- 
 The export here will tell the app to add an indicator with the unique name `exampleOffset` and calculations for this indicator are coded in class `offset`. The application expects the class implements {@linkcode Calculator} interface.
  
  The `name` field plays the role of a machine-readable identifier. We don't expect it to be some nice looking text.
