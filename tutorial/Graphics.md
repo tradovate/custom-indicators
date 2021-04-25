@@ -172,8 +172,6 @@ grouping to apply transformations that keep these contained objects in relative 
 container instead of each object. The other benefit of this is that we can leverage {@linkcode VisibilityConditions} over
 whole groups. Here's what we should see when we render this indicator:
 
-![Greenish, circled exclamation points.](../../media/Graphics1.png)  
-
 To understand our next step, let's do an experiment. First, zoom way out in the X axis - you can do so by scrolling the
 mouse wheel. Those circled exclamations don't scale down to fit the new bar size, instead they get clumped up and look bad.
 Now zoom way in on the X axis. Now because we haven't scaled up they look somewhat lacking and small. We can fix all of this
