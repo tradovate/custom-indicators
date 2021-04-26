@@ -69,4 +69,4 @@ module.exports = {
 };
 ```
  
-![FFT MA](../../media/FFTMA.png)
+![FFT MA](./media/FFTMA.png)

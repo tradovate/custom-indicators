@@ -87,6 +87,6 @@ module.exports = {
 };
 ```
  
-![Signaling ATR](../../media/SignalingATR.png)
+![Signaling ATR](./media/SignalingATR.png)
  
 `this.contractInfo` above is an object with details about the contract of the chart. The app assigns it to the indicator during construction.

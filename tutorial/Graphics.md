@@ -172,7 +172,7 @@ grouping to apply transformations that keep these contained objects in relative 
 container instead of each object. The other benefit of this is that we can leverage {@linkcode VisibilityConditions} over
 whole groups. Here's what we should see when we render this indicator:
 
-![Greenish, circled exclamation points.](../../media/Graphics1.png)  
+![Greenish, circled exclamation points.](./media/Graphics1.png)  
 
 To understand our next step, let's do an experiment. First, zoom way out in the X axis - you can do so by scrolling the
 mouse wheel. Those circled exclamations don't scale down to fit the new bar size, instead they get clumped up and look bad.
@@ -232,7 +232,7 @@ being calculated. What this allows us to do is render something different based 
 Now when the bars are tiny, and have only between 0 and 10 pixels between them, we will render a tiny dot instead of the circled
 exclamation.  
 
-![Now we have green dots over the small-scale bars.](../../media/Graphics2.png)
+![Now we have green dots over the small-scale bars.](./media/Graphics2.png)
 
 This introduces another {@linkcode GraphicsObject} as well - the {@linkcode Dots} object. It describes one or more WebGL
 dots to render. At 10 pixels of space per bar or greater we draw our standard circled exclamation. Note that the `scaleRangeX`,
@@ -283,4 +283,4 @@ part of the return value of our tracker's `push` function.
 ```
 Rendering our indicator should yield this result at big pixel-to-domain ratios:  
 
-![A bit of cyan text indicating the difference between the value at the last index and the bar's value.](../../media/Graphics3.png)
+![A bit of cyan text indicating the difference between the value at the last index and the bar's value.](./media/Graphics3.png)
