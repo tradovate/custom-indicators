@@ -109,6 +109,7 @@ module.exports = {
    }
 };
 ```
+![DNA-like Double EMA](https://i.ibb.co/0Djtkpm/Double-EMA.png)
  
 The plotter function above involves the {@linkcode plotting} built-in module. The module contains a bunch of helper functions to simplify plotting. In our case, we use {@linkcode plotting.x.get} to retrieve the X coordinate of the item.
  
