@@ -16,7 +16,7 @@ module.exports = {
    calculator: offset
 };
 ```
-![alt text]('https://ibb.co/Fqb2ngN')
+![alt text]('https://i.ibb.co/2Y7x5gm/Simple-Offset.png')
  
 The export here will tell the app to add an indicator with the unique name `exampleOffset` and calculations for this indicator are coded in class `offset`. The application expects the class implements {@linkcode Calculator} interface.
  
