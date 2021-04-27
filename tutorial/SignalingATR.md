@@ -86,6 +86,6 @@ module.exports = {
    schemeStyles: predef.styles.solidLine("#ffe270")
 };
 ```
- 
+ ![alt text](https://i.ibb.co/3TNhNJs/Signaling-ATR.png)
  
 `this.contractInfo` above is an object with details about the contract of the chart. The app assigns it to the indicator during construction.
