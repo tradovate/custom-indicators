@@ -185,4 +185,6 @@ Because there are no regular plots and the app can struggle to evaluate min/max 
  
 The same `lower` and `upper` fields are used as domain boundaries for the heatmap object. Each column of the heatmap is a list of colors that divides a space between `lower` and `upper` to equal pieces.
  
+ ![Spectrogram](https://i.ibb.co/LQprD5P/spectrogram.png)
+ 
 Note: vertical axis shows frequency as a divider of the period of the indicator. For example, `1` corresponds to the whole period, `2` - twice faster than indicator's period, etc.
