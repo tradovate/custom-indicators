@@ -167,6 +167,8 @@ we can use the {@linkcode Container} type. Replace your `items` code with this s
 },
 //...
 ```
+![alt text](https://i.ibb.co/0nmpf4j/Graphics1.png)
+
 The container has one unique field, `children`, which is an array of {@linkcode GraphicsObject}s. You can leverage this
 grouping to apply transformations that keep these contained objects in relative space. That way you can move the whole 
 container instead of each object. The other benefit of this is that we can leverage {@linkcode VisibilityConditions} over
