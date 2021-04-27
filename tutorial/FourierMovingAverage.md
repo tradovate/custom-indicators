@@ -68,3 +68,4 @@ module.exports = {
    tags: ["My Indicators"],
 };
 ```
+![FFA MA](https://i.ibb.co/nP80J2B/FFTMA.png)
