@@ -232,7 +232,7 @@ being calculated. What this allows us to do is render something different based 
 Now when the bars are tiny, and have only between 0 and 10 pixels between them, we will render a tiny dot instead of the circled
 exclamation.  
 
-![Now we have green dots over the small-scale bars.](../../media/Graphics2.png)
+![Now we have green dots over the small-scale bars.](https://i.ibb.co/RzV9brS/Graphics2.png)
 
 This introduces another {@linkcode GraphicsObject} as well - the {@linkcode Dots} object. It describes one or more WebGL
 dots to render. At 10 pixels of space per bar or greater we draw our standard circled exclamation. Note that the `scaleRangeX`,
@@ -283,4 +283,4 @@ part of the return value of our tracker's `push` function.
 ```
 Rendering our indicator should yield this result at big pixel-to-domain ratios:  
 
-![A bit of cyan text indicating the difference between the value at the last index and the bar's value.](../../media/Graphics3.png)
+![A bit of cyan text indicating the difference between the value at the last index and the bar's value.](https://i.ibb.co/mtx3sxf/Graphics3.png)
