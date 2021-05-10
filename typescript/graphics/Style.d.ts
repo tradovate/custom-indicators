@@ -73,12 +73,13 @@ export interface FontStyle {
 }
 
 /**
- * Definition for a `Text` `DisplayObject`'s fill style.
+ * Definition for a `Text` `DisplayObject`'s fill style. This inherits properties from `FontStyle`.
  * ```javascript
- *  const red = { color: '#f00' }
+ *  const red18pt = { fill: '#f00', fontSize: 18 }
  * ```
  */
 export interface TextStyle extends FontStyle {
+    /** Optional. The color that the text should be rendered. */
     readonly fill?: Color;
 }
 
