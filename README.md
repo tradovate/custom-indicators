@@ -12,8 +12,6 @@ Home for Tradovate Trader custom indicators.
 
 `/typescript`: Typescript definitions for interfaces and classes
 
-If you need to build a full-scale application that connects to Tradovate, please request an invitation to our [Tradovate API](https://github.com/tradovate/api)
-
 ## Third-party repositories
   * https://github.com/blakeharv/tradovate-indicators
   * https://github.com/paidtofade/tradovate-indicators
