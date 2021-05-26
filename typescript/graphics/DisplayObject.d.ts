@@ -16,7 +16,6 @@ import { ScaleBound } from "./Scale";
  *          }
  *      }
  *  }
- * ...
  * ```
  */
 export type DisplayObject = LineSegments | Shapes | ContourShapes | Instancing | Text | Container | Dots;
@@ -50,7 +49,6 @@ export type DisplayObject = LineSegments | Shapes | ContourShapes | Instancing |
  *          color: '#f00'
  *      }
  * }
- * ...
  * ```
 */
 export interface LineSegments {
@@ -86,7 +84,6 @@ export interface LineSegments {
  *          infiniteEnd: true          
  *      }
  *  ]
- * ...
  * ``` 
  */
 export interface Line {
@@ -192,7 +189,6 @@ export interface ContourShapes {
  *          ]
  *      }
  *  }
- *  ...
  * ```
  */
 export type Shape = Rectangle | Circle | RoundedRectangle | Polygon | Ellipse;
@@ -230,9 +226,7 @@ export type Shape = Rectangle | Circle | RoundedRectangle | Polygon | Ellipse;
  *              }
  *          ]
  *      }
- *  }
- * ...
- *      
+ *  }   
  * ```
  */
 export interface Rectangle {
@@ -277,9 +271,7 @@ export interface Rectangle {
  *              }
  *          ]
  *      }
- *  }
- * ...
- *      
+ *  }    
  * ```
  */
 export interface Ellipse {
@@ -320,9 +312,7 @@ export interface Ellipse {
  *              }
  *          ]
  *      }
- *  }
- * ...
- *      
+ *  }   
  * ```
  */
 export interface Circle {
@@ -364,9 +354,7 @@ export interface Circle {
  *              }
  *          ]
  *      }
- *  }
- * ...
- *      
+ *  }      
  * ```
  */
 export interface RoundedRectangle {
@@ -421,9 +409,7 @@ export interface RoundedRectangle {
  *              }
  *          ]
  *      }
- *  }
- * ...
- *      
+ *  }     
  * ```
  */
 export interface Polygon {
@@ -461,7 +447,6 @@ export interface Polygon {
  *          }
  *      ]
  * }
- * ...
  * ```
  * 
  */
@@ -530,7 +515,6 @@ export interface Instance {
  *          }
  *      }
  * }
- * ...
  * ```
  */
 export interface Dots {
