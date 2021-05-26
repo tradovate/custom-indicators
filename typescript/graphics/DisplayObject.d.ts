@@ -201,14 +201,14 @@ export type Shape = Rectangle | Circle | RoundedRectangle | Polygon | Ellipse;
  * This is a `Shape` primitive. Defines an instance of a Rectangle shape for use in the Shapes or ContourShapes `primitives` value.
  * Usage:
  * ``` javascript
- * // Inside a calculator's `map` function, this particular definition will draw 
+ * // Inside a calculator's map function, this particular definition will draw 
  * // red 24x24px squares centered at { x: index, y: value } of each rendered bar
  * ...
  *  {
  *      graphics: {
  *          items: [ 
  *              {
- *                  tag: "Shapes",
+ *                  tag: 'Shapes',
  *                  key: 'rects',
  *                  //the rectangle is a primitve
  *                  primitives: [ 
@@ -255,7 +255,7 @@ export interface Rectangle {
  *      graphics: {
  *          items: [ 
  *              {
- *                  tag: "Shapes",
+ *                  tag: 'Shapes',
  *                  key: 'ellipses',
  *                  //the ellipse is a primitve
  *                  primitives: [ 
