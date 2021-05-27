@@ -192,7 +192,7 @@ export interface ContourShapes {
  *          ]
  *      }
  *  }
- *  ...
+ * ...
  * ```
  */
 export type Shape = Rectangle | Circle | RoundedRectangle | Polygon | Ellipse;
@@ -232,7 +232,6 @@ export type Shape = Rectangle | Circle | RoundedRectangle | Polygon | Ellipse;
  *      }
  *  }
  * ...
- *      
  * ```
  */
 export interface Rectangle {
@@ -279,7 +278,6 @@ export interface Rectangle {
  *      }
  *  }
  * ...
- *      
  * ```
  */
 export interface Ellipse {
@@ -322,7 +320,6 @@ export interface Ellipse {
  *      }
  *  }
  * ...
- *      
  * ```
  */
 export interface Circle {
@@ -365,8 +362,7 @@ export interface Circle {
  *          ]
  *      }
  *  }
- * ...
- *      
+ * ...     
  * ```
  */
 export interface RoundedRectangle {
@@ -423,7 +419,6 @@ export interface RoundedRectangle {
  *      }
  *  }
  * ...
- *      
  * ```
  */
 export interface Polygon {

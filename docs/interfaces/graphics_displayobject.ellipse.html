@@ -280,42 +280,39 @@
 					<div class="lead">
 						<p>This is a <code>Shape</code> primitive. Defines an instance of an <code>Ellipse</code> shape for use in the <code>Shapes</code> or <code>ContourShapes</code> <code>primitives</code> value.
 						Usage:</p>
-						<p>``` javascript
-							//within a map function&#39;s return object. This will draw a red ellipse centered at each rendered
-							//bar&#39;s value and index.
-							...
-							{
-							graphics: {
-							items: [
-							{
-							tag: &quot;Shapes&quot;,
-							key: &#39;ellipses&#39;,
-							//the ellipse is a primitve
-							primitives: [
-							{
-							tag: &#39;Ellipse&#39;,
-							position: {
-							x: du(d.index()),
-							y: du(d.value()),
-							}
-							size: {
-							height: px(18),
-							width: px(24)
-							}
-							}
-							],
-							fillStyle: {
-							color: &#39;#f00&#39;
-							}
-							}
-							]
-							}
-							}
-						...</p>
-					</div>
-					</div><div class="tsd-comment tsd-typography tsd-comment-text">
-					<pre><code>
+						<pre><code class="language-javascript"><span style="color: #008000">//within a map function&#039;s return object. This will draw a red ellipse centered at each rendered</span>
+<span style="color: #008000">//bar&#039;s value and index.</span>
+<span style="color: #000000">...</span>
+<span style="color: #000000"> {</span>
+<span style="color: #000000">     graphics: {</span>
+<span style="color: #000000">         items: [</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Shapes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;ellipses&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #008000">//the ellipse is a primitve</span>
+<span style="color: #000000">                 </span><span style="color: #001080">primitives:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                     {</span>
+<span style="color: #000000">                         </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Ellipse&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                         </span><span style="color: #001080">position:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                             </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                             </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                         }</span>
+<span style="color: #000000">                         </span><span style="color: #001080">size</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                             </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">18</span><span style="color: #000000">),</span>
+<span style="color: #000000">                             </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">24</span><span style="color: #000000">)</span>
+<span style="color: #000000">                         }</span>
+<span style="color: #000000">                     }</span>
+<span style="color: #000000">                 ],</span>
+<span style="color: #000000">                 </span><span style="color: #001080">fillStyle:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#f00&#039;</span>
+<span style="color: #000000">                 }</span>
+<span style="color: #000000">             }</span>
+<span style="color: #000000">         ]</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000">...</span>
 </code></pre>
+					</div>
 			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
@@ -353,8 +350,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L288">
-									graphics/DisplayObject.d.ts:288
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L286">
+									graphics/DisplayObject.d.ts:286
 								</a>
 							</li>
 						</ul>
@@ -370,8 +367,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L290">
-									graphics/DisplayObject.d.ts:290
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L288">
+									graphics/DisplayObject.d.ts:288
 								</a>
 							</li>
 						</ul>
@@ -387,8 +384,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L286">
-									graphics/DisplayObject.d.ts:286
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L284">
+									graphics/DisplayObject.d.ts:284
 								</a>
 							</li>
 						</ul>

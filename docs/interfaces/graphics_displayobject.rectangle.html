@@ -286,42 +286,39 @@
 					<div class="lead">
 						<p>This is a <code>Shape</code> primitive. Defines an instance of a Rectangle shape for use in the Shapes or ContourShapes <code>primitives</code> value.
 						Usage:</p>
-						<p>``` javascript
-							// Inside a calculator&#39;s <code>map</code> function, this particular definition will draw
-							// red 24x24px squares centered at { x: index, y: value } of each rendered bar
-							...
-							{
-							graphics: {
-							items: [
-							{
-							tag: &quot;Shapes&quot;,
-							key: &#39;rects&#39;,
-							//the rectangle is a primitve
-							primitives: [
-							{
-							tag: &#39;Rectangle&#39;,
-							position: {
-							x: du(d.index()),
-							y: du(d.value()),
-							}
-							size: {
-							height: px(24),
-							width: px(24)
-							}
-							}
-							],
-							fillStyle: {
-							color: &#39;#f00&#39;
-							}
-							}
-							]
-							}
-							}
-						...</p>
-					</div>
-					</div><div class="tsd-comment tsd-typography tsd-comment-text">
-					<pre><code>
+						<pre><code class="language-javascript"><span style="color: #008000">// Inside a calculator&#039;s `map` function, this particular definition will draw</span>
+<span style="color: #008000">// red 24x24px squares centered at { x: index, y: value } of each rendered bar</span>
+<span style="color: #000000">...</span>
+<span style="color: #000000"> {</span>
+<span style="color: #000000">     graphics: {</span>
+<span style="color: #000000">         items: [</span>
+<span style="color: #000000">             {</span>
+<span style="color: #000000">                 </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Shapes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;rects&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                 </span><span style="color: #008000">//the rectangle is a primitve</span>
+<span style="color: #000000">                 </span><span style="color: #001080">primitives:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">                     {</span>
+<span style="color: #000000">                         </span><span style="color: #001080">tag:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Rectangle&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">                         </span><span style="color: #001080">position:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                             </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">index</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                             </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #795E26">du</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">.</span><span style="color: #795E26">value</span><span style="color: #000000">()),</span>
+<span style="color: #000000">                         }</span>
+<span style="color: #000000">                         </span><span style="color: #001080">size</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                             </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">24</span><span style="color: #000000">),</span>
+<span style="color: #000000">                             </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #795E26">px</span><span style="color: #000000">(</span><span style="color: #098658">24</span><span style="color: #000000">)</span>
+<span style="color: #000000">                         }</span>
+<span style="color: #000000">                     }</span>
+<span style="color: #000000">                 ],</span>
+<span style="color: #000000">                 </span><span style="color: #001080">fillStyle:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">                     </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#f00&#039;</span>
+<span style="color: #000000">                 }</span>
+<span style="color: #000000">             }</span>
+<span style="color: #000000">         ]</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000">...</span>
 </code></pre>
+					</div>
 			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
@@ -365,8 +362,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L244">
-									graphics/DisplayObject.d.ts:244
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L243">
+									graphics/DisplayObject.d.ts:243
 								</a>
 							</li>
 						</ul>
@@ -377,8 +374,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L243">
-									graphics/DisplayObject.d.ts:243
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L242">
+									graphics/DisplayObject.d.ts:242
 								</a>
 							</li>
 						</ul>
@@ -389,8 +386,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L241">
-									graphics/DisplayObject.d.ts:241
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L240">
+									graphics/DisplayObject.d.ts:240
 								</a>
 							</li>
 						</ul>
@@ -401,8 +398,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L242">
-									graphics/DisplayObject.d.ts:242
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L241">
+									graphics/DisplayObject.d.ts:241
 								</a>
 							</li>
 						</ul>
@@ -413,8 +410,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L239">
-									graphics/DisplayObject.d.ts:239
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/graphics/DisplayObject.d.ts#L238">
+									graphics/DisplayObject.d.ts:238
 								</a>
 							</li>
 						</ul>
