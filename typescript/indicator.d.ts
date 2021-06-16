@@ -5,7 +5,6 @@ import { Plots } from "./plots";
 import { Plotter } from "./plotter";
 import { Scaler } from "./scaler";
 import { SchemeStyles } from "./scheme-styles";
-import { Shifts } from "./shifts";
 
 /***
  * Indicator's definition used by the application to connect it with UI.
@@ -44,7 +43,7 @@ interface Indicator {
     readonly name: string;
     /** Calculation algorithms */
     readonly calculator: Calculator;
-    /** Readable text that is used in the UI. Optional. */
+    /** Readable text that used in UI. Optional. */
     readonly description?: string;
     /** Set of input parameters. Optional. */
     readonly params?: ParameterDefinitions;
@@ -69,6 +68,4 @@ interface Indicator {
         /** Chart's symbol history should include volume profiles */
         readonly volumeProfiles?: boolean;
     }
-    /** An object map keyed by plot names with values that tell the application how many bars to move that plot back or forward in the X axis. */
-    readonly shifts?: Shifts;
 }
