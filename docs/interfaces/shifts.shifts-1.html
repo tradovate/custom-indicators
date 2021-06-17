@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Scaler |
+	<title>Shifts |
 	Tradovate Custom Indicators</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,10 +56,10 @@
 	<div class="container">
 		<ul class="tsd-breadcrumb">
 			<li>
-				<a href="../modules/scaler.html">scaler</a>
+				<a href="../modules/shifts.html">Shifts</a>
 			</li>
 			<li>
-				<a href="scaler.scaler-1.html">Scaler</a>
+				<a href="shifts.shifts-1.html">Shifts</a>
 			</li>
 		</ul>
 	</div>
@@ -120,9 +120,13 @@
 					<li class="  root">
 						<a href="../modules.html" class="tsd-kind-icon">Modules</a>
 					</li>
-					<li class=" tsd-kind-module root">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module root">
 						<a href="../modules/shifts.html" class="tsd-kind-icon">Shifts</a>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-module root">
 						<a href="../modules/timeseries.html" class="tsd-kind-icon">Time<wbr>Series</a>
 					</li>
@@ -169,13 +173,9 @@
 					<li class=" tsd-kind-module root">
 						<a href="../modules/plotter.html" class="tsd-kind-icon">plotter</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-module root">
+					<li class=" tsd-kind-module root">
 						<a href="../modules/scaler.html" class="tsd-kind-icon">scaler</a>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-module root">
 						<a href="../modules/scheme_styles.html" class="tsd-kind-icon">scheme-<wbr>styles</a>
 					</li>
@@ -185,7 +185,7 @@
 				<div>
 					<ul class="tsd-hierarchy">
 						<li>
-							<span class="target">Scaler</span>
+							<span class="target">Shifts</span>
 						</li>
 					</ul>
 				</div>
@@ -193,13 +193,10 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module root">
-						<a href="scaler.scaler-1.html" class="tsd-kind-icon">Scaler</a>
+						<a href="shifts.shifts-1.html" class="tsd-kind-icon">Shifts</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="scaler.scaler-1.html#fields" class="tsd-kind-icon">fields</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="scaler.scaler-1.html#type" class="tsd-kind-icon">type</a>
+								<a href="shifts.shifts-1.html#value" class="tsd-kind-icon">value</a>
 							</li>
 						</ul>
 					</li>
@@ -209,19 +206,29 @@
 			</nav>
 		</div>
 		<div class="col-content">
-			<h1>Interface Scaler</h1>
+			<h1>Interface Shifts</h1>
 			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
 					<div class="lead">
-						<p>Tells the app how to auto-scale the indicator in the chart area.</p>
+						<p>Describes a <code>Shifts</code> <code>Indicator</code> component. This is an object with string keys of any name whose values are numbers. Each key string
+						should correspond with a property you&#39;ve defined on the return object of the <code>map</code> function.</p>
 					</div>
 			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Scaler</span>
+						<span class="target">Shifts</span>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>plotName: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></div>
+				<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>Shift properties&#39; keys should be mapped to plot names.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
@@ -229,11 +236,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<div class="tsd-index-list">
-								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="scaler.scaler-1.html#fields"
-									class="tsd-kind-icon">fields</a>
-								</div>
-								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="scaler.scaler-1.html#type"
-									class="tsd-kind-icon">type</a>
+								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="shifts.shifts-1.html#value"
+									class="tsd-kind-icon">value</a>
 								</div>
 							</div>
 						</section>
@@ -243,34 +247,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="fields" class="tsd-anchor"></a>
-					<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">readonly string[]</span></div>
+					<a name="value" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/scaler.d.ts#L5">
-									scaler.d.ts:5
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/shifts.d.ts#L7">
+									shifts.d.ts:7
 								</a>
 							</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>A set of fields of output object calculated by <a href="calculator.calculator-1.html#map"><code>Calculator.map</code></a> that should by used by autoscaling functionality</p>
+							<p>The application expects <code>value</code> but you can return anything from <code>map</code>.</p>
 						</div>
 					</div>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="type" class="tsd-anchor"></a>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"multiPath"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/scaler.d.ts#L3">
-									scaler.d.ts:3
-								</a>
-							</li>
-						</ul>
-					</aside>
 			</section></section>
 			<!--{&quot;options&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;tsconfig&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;,&quot;./typescript/Shifts.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;},{&quot;title&quot;:&quot;Graphics&quot;,&quot;source&quot;:&quot;Graphics.md&quot;},{&quot;title&quot;:&quot;Alligator&quot;,&quot;source&quot;:&quot;Alligator.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
 			<footer class="with-border-bottom">
