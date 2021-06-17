@@ -10,34 +10,33 @@ import { Shifts } from "./shifts";
 /***
  * Indicator's definition used by the application to connect it with UI.
  * Example:
- ```
- ...
-module.exports = {
-    name: "doubleEma",
-    description: "Double EMA",
-    calculator: doubleEma,
-    params: {
-        slowPeriod: predef.paramSpecs.period(21),
-        fastPeriod: predef.paramSpecs.period(10)
-    },
-    tags: ["My Indicators"],
-    plots: {
-        fast: { title: "FastEMA" },
-        slow: { title: "SlowEMA" },
-    },
-    plotter: [
-        predef.plotters.dots("slow"),
-        predef.plotters.singleline("fast"),
-        predef.plotters.custom(dnaLikePlotter)
-    ],
-    schemeStyles: {
-        dark: {
-            fast: {color: "red"},
-            slow: {color: "lightblue"}
-        }
-    }
-};
-```
+ * ```js
+ *  module.exports = {
+ *      name: "doubleEma",
+ *      description: "Double EMA",
+ *      calculator: doubleEma,
+ *      params: {
+ *          slowPeriod: predef.paramSpecs.period(21),
+ *          fastPeriod: predef.paramSpecs.period(10)
+ *      },
+ *      tags: ["My Indicators"],
+ *      plots: {
+ *          fast: { title: "FastEMA" },
+ *          slow: { title: "SlowEMA" },
+ *      },
+ *      plotter: [
+ *          predef.plotters.dots("slow"),
+ *          predef.plotters.singleline("fast"),
+ *          predef.plotters.custom(dnaLikePlotter)
+ *      ],
+ *      schemeStyles: {
+ *          dark: {
+ *              fast: {color: "red"},
+ *              slow: {color: "lightblue"}
+ *          }
+ *      }
+ *  };
+ * ```
  */
 interface Indicator {
     /** Unique identifier associated with the indicator. */
