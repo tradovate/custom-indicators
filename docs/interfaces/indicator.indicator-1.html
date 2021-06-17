@@ -226,6 +226,9 @@
 								<a href="indicator.indicator-1.html#schemestyles" class="tsd-kind-icon">scheme<wbr>Styles</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="indicator.indicator-1.html#shifts" class="tsd-kind-icon">shifts</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="indicator.indicator-1.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 						</ul>
@@ -241,32 +244,31 @@
 					<div class="lead">
 						<p>Indicator&#39;s definition used by the application to connect it with UI.
 						Example:</p>
-						<pre><code><span style="color: #000000">...</span>
-<span style="color: #267F99">module</span><span style="color: #000000">.</span><span style="color: #267F99">exports</span><span style="color: #000000"> = {</span>
-<span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;doubleEma&quot;</span><span style="color: #000000">,</span>
-<span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Double EMA&quot;</span><span style="color: #000000">,</span>
-<span style="color: #001080">calculator:</span><span style="color: #000000"> </span><span style="color: #001080">doubleEma</span><span style="color: #000000">,</span>
-<span style="color: #001080">params:</span><span style="color: #000000"> {</span>
-<span style="color: #001080">slowPeriod:</span><span style="color: #000000"> </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">paramSpecs</span><span style="color: #000000">.</span><span style="color: #795E26">period</span><span style="color: #000000">(</span><span style="color: #098658">21</span><span style="color: #000000">),</span>
-<span style="color: #001080">fastPeriod:</span><span style="color: #000000"> </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">paramSpecs</span><span style="color: #000000">.</span><span style="color: #795E26">period</span><span style="color: #000000">(</span><span style="color: #098658">10</span><span style="color: #000000">)</span>
-<span style="color: #000000">},</span>
-<span style="color: #001080">tags:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;My Indicators&quot;</span><span style="color: #000000">],</span>
-<span style="color: #001080">plots:</span><span style="color: #000000"> {</span>
-<span style="color: #001080">fast:</span><span style="color: #000000"> { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;FastEMA&quot;</span><span style="color: #000000"> },</span>
-<span style="color: #001080">slow:</span><span style="color: #000000"> { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;SlowEMA&quot;</span><span style="color: #000000"> },</span>
-<span style="color: #000000">},</span>
-<span style="color: #001080">plotter:</span><span style="color: #000000"> [</span>
-<span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">dots</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;slow&quot;</span><span style="color: #000000">),</span>
-<span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">singleline</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;fast&quot;</span><span style="color: #000000">),</span>
-<span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">custom</span><span style="color: #000000">(</span><span style="color: #001080">dnaLikePlotter</span><span style="color: #000000">)</span>
-<span style="color: #000000">],</span>
-<span style="color: #001080">schemeStyles:</span><span style="color: #000000"> {</span>
-<span style="color: #001080">dark:</span><span style="color: #000000"> {</span>
-<span style="color: #001080">fast:</span><span style="color: #000000"> {</span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;red&quot;</span><span style="color: #000000">},</span>
-<span style="color: #001080">slow:</span><span style="color: #000000"> {</span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;lightblue&quot;</span><span style="color: #000000">}</span>
-<span style="color: #000000">}</span>
-<span style="color: #000000">}</span>
-<span style="color: #000000">};</span>
+						<pre><code class="language-js"><span style="color: #000000"> </span><span style="color: #267F99">module</span><span style="color: #000000">.</span><span style="color: #267F99">exports</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">     </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;doubleEma&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">description:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Double EMA&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">calculator:</span><span style="color: #000000"> </span><span style="color: #001080">doubleEma</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">params:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #001080">slowPeriod:</span><span style="color: #000000"> </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">paramSpecs</span><span style="color: #000000">.</span><span style="color: #795E26">period</span><span style="color: #000000">(</span><span style="color: #098658">21</span><span style="color: #000000">),</span>
+<span style="color: #000000">         </span><span style="color: #001080">fastPeriod:</span><span style="color: #000000"> </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">paramSpecs</span><span style="color: #000000">.</span><span style="color: #795E26">period</span><span style="color: #000000">(</span><span style="color: #098658">10</span><span style="color: #000000">)</span>
+<span style="color: #000000">     },</span>
+<span style="color: #000000">     </span><span style="color: #001080">tags:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;My Indicators&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">     </span><span style="color: #001080">plots:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #001080">fast:</span><span style="color: #000000"> { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;FastEMA&quot;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">         </span><span style="color: #001080">slow:</span><span style="color: #000000"> { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;SlowEMA&quot;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">     },</span>
+<span style="color: #000000">     </span><span style="color: #001080">plotter:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">         </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">dots</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;slow&quot;</span><span style="color: #000000">),</span>
+<span style="color: #000000">         </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">singleline</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;fast&quot;</span><span style="color: #000000">),</span>
+<span style="color: #000000">         </span><span style="color: #001080">predef</span><span style="color: #000000">.</span><span style="color: #001080">plotters</span><span style="color: #000000">.</span><span style="color: #795E26">custom</span><span style="color: #000000">(</span><span style="color: #001080">dnaLikePlotter</span><span style="color: #000000">)</span>
+<span style="color: #000000">     ],</span>
+<span style="color: #000000">     </span><span style="color: #001080">schemeStyles:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #001080">dark:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">             </span><span style="color: #001080">fast:</span><span style="color: #000000"> {</span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;red&quot;</span><span style="color: #000000">},</span>
+<span style="color: #000000">             </span><span style="color: #001080">slow:</span><span style="color: #000000"> {</span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;lightblue&quot;</span><span style="color: #000000">}</span>
+<span style="color: #000000">         }</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> };</span>
 </code></pre>
 					</div>
 			</div></section>
@@ -319,6 +321,9 @@
 								</div>
 								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="indicator.indicator-1.html#schemestyles"
 									class="tsd-kind-icon">schemeStyles</a>
+								</div>
+								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="indicator.indicator-1.html#shifts"
+									class="tsd-kind-icon">shifts</a>
 								</div>
 								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="indicator.indicator-1.html#tags"
 									class="tsd-kind-icon">tags</a>
@@ -378,7 +383,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>Readable text that used in UI. Optional.</p>
+							<p>Readable text that is used in the UI. Optional.</p>
 						</div>
 					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -545,6 +550,23 @@
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
 							<p>Default color/style of plotted results.</p>
+						</div>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="shifts" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">shifts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Shifts</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/indicator.d.ts#L72">
+									indicator.d.ts:72
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>An object map keyed by plot names with values that tell the application how many bars to move that plot back or forward in the X axis.</p>
 						</div>
 					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
