@@ -16,7 +16,7 @@
         "./typescript/dlls.d.ts", "./typescript/plots.d.ts", "./typescript/plotter.d.ts", "./typescript/canvas.d.ts",
         "./typescript/scaler.d.ts", "./typescript/scheme-styles.d.ts", "./typescript/TimeSeries.d.ts",
         "./typescript/graphics/GraphicsResponse.d.ts", "./typescript/graphics/DisplayObject.d.ts", "./typescript/graphics/Scale.d.ts",
-        "./typescript/graphics/Style.d.ts"],
+        "./typescript/graphics/Style.d.ts", "./typescript/Shifts.d.ts"],
     "theme": "./node_modules/typedoc-loopingz-theme/bin/default",
     "out": "docs",
     "readme": "./tutorial/index.md",
@@ -84,6 +84,10 @@
             {
               "title": "Graphics",
               "source": "Graphics.md"
+            },
+            {
+                "title": "Alligator",
+                "source": "Alligator.md"
             }
           ]
         }
