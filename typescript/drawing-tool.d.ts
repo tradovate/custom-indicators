@@ -1,6 +1,9 @@
+import { ParameterDefinitions } from "./params";
+import { Plots } from "./plots";
 import { Point } from "./graphics/DisplayObject";
 import { GraphicsResponse } from "./graphics/GraphicsResponse"
-import { LineStyle } from "./graphics/Style";
+import { LineStyle, Color } from "./graphics/Style";
+import { ScaleBound } from "./graphics/Scale";
 
 interface DrawingTool {
   /** Unique identifier associated with the indicator. */
