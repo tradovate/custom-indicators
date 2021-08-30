@@ -1,3 +1,5 @@
+// This functionality requires Tradovate Trader 1.210903+
+
 import { ParameterDefinitions } from "./params";
 import { Plots } from "./plots";
 import { Point } from "./graphics/DisplayObject";
