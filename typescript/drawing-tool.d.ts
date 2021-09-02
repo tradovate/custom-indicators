@@ -30,8 +30,8 @@ interface DrawingArgs {
 }
 
 interface DrawingToolImplementation {
-  init(args: DrawingArgs): any;
   render(args: DrawingArgs): GraphicsResponse;
+  init?: (args: DrawingArgs) => any;
   update?: (args: DrawingArgs) => { newState: any };
   anchorRestraints?: (args: DrawingArgs) => readonly AnchorRestraint[];
   anchorStyles?: (args: DrawingArgs) => readonly AnchorStyle[];
