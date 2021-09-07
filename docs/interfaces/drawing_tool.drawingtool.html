@@ -219,6 +219,12 @@
 								<a href="drawing_tool.drawingtool.html#drawing" class="tsd-kind-icon">drawing</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="drawing_tool.drawingtool.html#maxn" class="tsd-kind-icon">maxN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="drawing_tool.drawingtool.html#minn" class="tsd-kind-icon">minN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="drawing_tool.drawingtool.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -248,6 +254,25 @@
 		</div>
 		<div class="col-content">
 			<h1>Interface DrawingTool</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>Definition for a Custom Drawing Tool for use in the Trader application. This is the <code>module.exports</code> portion of the Custom Drawing Tool.
+						Ex:</p>
+						<p>```js
+						//an example drawing tool export</p>
+					</div>
+					</div><div class="tsd-comment tsd-typography tsd-comment-text">
+					<p> module.exports = {
+						name: &#39;MyCustomDrawingTool&#39;,
+						drawing: MyDrawingImplementation,
+						description: &#39;My Custom Tool&#39;,
+						params: {
+						period: predef.paramSpecs.period(13)
+						}
+					}</p>
+					<pre><code>
+</code></pre>
+			</div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -267,6 +292,12 @@
 								</div>
 								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="drawing_tool.drawingtool.html#drawing"
 									class="tsd-kind-icon">drawing</a>
+								</div>
+								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="drawing_tool.drawingtool.html#maxn"
+									class="tsd-kind-icon">maxN</a>
+								</div>
+								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="drawing_tool.drawingtool.html#minn"
+									class="tsd-kind-icon">minN</a>
 								</div>
 								<div class="tsd-kind-property tsd-parent-kind-interface"><a href="drawing_tool.drawingtool.html#name"
 									class="tsd-kind-icon">name</a>
@@ -293,8 +324,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L16">
-									drawing-tool.d.ts:16
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L32">
+									drawing-tool.d.ts:32
 								</a>
 							</li>
 						</ul>
@@ -310,8 +341,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L14">
-									drawing-tool.d.ts:14
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L30">
+									drawing-tool.d.ts:30
 								</a>
 							</li>
 						</ul>
@@ -322,13 +353,47 @@
 						</div>
 					</div>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="maxn" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">maxN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L40">
+									drawing-tool.d.ts:40
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Maximum number of anchors that this drawing tool can have.</p>
+						</div>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="minn" class="tsd-anchor"></a>
+					<div class="tsd-signature tsd-kind-icon">minN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L42">
+									drawing-tool.d.ts:42
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Minimum number of anchors that this drawing tool can have.</p>
+						</div>
+					</div>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L12">
-									drawing-tool.d.ts:12
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L28">
+									drawing-tool.d.ts:28
 								</a>
 							</li>
 						</ul>
@@ -344,8 +409,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L18">
-									drawing-tool.d.ts:18
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L34">
+									drawing-tool.d.ts:34
 								</a>
 							</li>
 						</ul>
@@ -361,8 +426,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L20">
-									drawing-tool.d.ts:20
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L36">
+									drawing-tool.d.ts:36
 								</a>
 							</li>
 						</ul>
@@ -378,8 +443,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L22">
-									drawing-tool.d.ts:22
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L38">
+									drawing-tool.d.ts:38
 								</a>
 							</li>
 						</ul>
@@ -390,7 +455,7 @@
 						</div>
 					</div>
 			</section></section>
-			<!--{&quot;options&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;tsconfig&quot;:&quot;/Users/victorvins/Projects/custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/drawing-tool.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;,&quot;./typescript/Shifts.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;},{&quot;title&quot;:&quot;Graphics&quot;,&quot;source&quot;:&quot;Graphics.md&quot;},{&quot;title&quot;:&quot;Alligator&quot;,&quot;source&quot;:&quot;Alligator.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
+			<!--{&quot;options&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;tsconfig&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/drawing-tool.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;,&quot;./typescript/Shifts.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;},{&quot;title&quot;:&quot;Graphics&quot;,&quot;source&quot;:&quot;Graphics.md&quot;},{&quot;title&quot;:&quot;Alligator&quot;,&quot;source&quot;:&quot;Alligator.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
 			<footer class="with-border-bottom">
 			</footer>
 			<div class="container tsd-generator">
