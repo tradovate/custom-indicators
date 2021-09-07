@@ -243,19 +243,21 @@ interface DrawingToolImplementation {
 type CoordinateRestraint = number | [number, number];
 
 /**
- * An object with an `x` or `y` field that describes the {@link CoordinateRestraint} for a Custom Drawing Tool's Anchor.
+ * An object with an `x` and/or `y` field that describes the {@link CoordinateRestraint} for a Custom Drawing Tool's Anchor at the 
+ * matching array position.  
  * 
  * ```js
  * 
  *  const MyCustomTool = {
  *      //...
  * 
- *      //a drawing tool with these retraints can move 2 units in the Y axis and 14 units in the X axis
+ *      //the anchor at position [0] can move 2 units in the Y axis and the 
+ *      //anchor at position [1] can move 14 units in the X axis
  *      anchorRestraints() {
  *          return [{y: 2}, {x: 14}]
  *      },
  * 
- *      //a drawing tool with these restraints can move between the 4525 and 4535 price in the Y axis
+ *      //the anchor at position [0] can move between the 4525 and 4535 price in the Y axis
  *      anchorRestraints() {
  *          return [{y: [4525, 4535]}]
  *      },
