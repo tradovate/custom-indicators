@@ -189,7 +189,8 @@ interface DrawingToolImplementation {
   *                     x: 'center',
   *                     y: 'center'
   *                 },
-  *                 items: [  *                     {                        
+  *                 items: [  
+  *                     {                        
   *                         content: "Hurray5",
   *                         title: "Woot-"
   *                     },
