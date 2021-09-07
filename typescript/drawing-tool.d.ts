@@ -9,7 +9,7 @@ import { ScaleBound } from "./graphics/Scale";
 
 /**
  * Definition for a Custom Drawing Tool for use in the Trader application. This is the `module.exports` portion of the Custom Drawing Tool.
- * Ex:
+ * 
  * ```js
  *  //an example drawing tool export
  * 
@@ -22,6 +22,7 @@ import { ScaleBound } from "./graphics/Scale";
  *      }
  *  }
  * ```
+ * 
  */
 interface DrawingTool {
   /** Unique identifier associated with the indicator. */
@@ -66,7 +67,7 @@ interface DrawingArgs {
  */
 interface DrawingToolImplementation {
   /** Initializes the `state` parameter of {@link DrawingArgs}. 
-   * Ex:
+   * 
    * ```js
    * const MyCustomTool = {
    *    init() {
@@ -78,11 +79,12 @@ interface DrawingToolImplementation {
    *    //...
    * }
    * ```
+   * 
   */
   init?: () => any;
   /** 
    * Returns a `GraphicsResponse` object that defines what graphics to render and where. The returned object should contain an `items` array of {@link DisplayObject}.
-   * Ex:
+   * 
    * ```js
    * //the render function of a custom tool
    * 
@@ -98,12 +100,13 @@ interface DrawingToolImplementation {
    *    //...
    * }
    * ```
-  */
+   * 
+   */
   render(args: DrawingArgs): GraphicsResponse;
 
   /** 
    * Updates the `state` of the {@link DrawingArgs} parameter. 
-   * Ex:
+   * 
    * ```js
    * const MyCustomTool = {
    *    //...
@@ -123,12 +126,13 @@ interface DrawingToolImplementation {
    *    //...
    * },
    * ```
-  */
+   * 
+   */
   update?: (args: DrawingArgs) => { newState: any } | undefined | null;
 
   /** 
   * Limits the valid X and Y coordinate ranges that the Anchors can be separated by. 
-  * Ex:
+  * 
   * ```js
   * 
   *  const MyCustomTool = {
@@ -146,13 +150,14 @@ interface DrawingToolImplementation {
   * 
   *      //...
   *  }  
-  * ``` 
+  * ```
+  * 
   */
   anchorRestraints?: (args: DrawingArgs) => readonly AnchorRestraint[];
 
   /** 
   * Returns an array of {@link AnchorStyle} objects that define the colors for the Anchors in this Custom Drawing Tool.
-  * Ex:
+  * 
   * ```js
   *  const MyCustomTool = {
   *      //...
@@ -164,13 +169,14 @@ interface DrawingToolImplementation {
   *      
   *      //...
   *  }
-  * ``` 
+  * ```
+  * 
   */
   anchorStyles?: (args: DrawingArgs) => readonly AnchorStyle[];
 
   /** 
   * Returns an array of {@link DrawingTooltip} objects.
-  * Ex:
+  * 
   * ```js
   * const MyCustomTool = {
   *     //...
@@ -183,7 +189,8 @@ interface DrawingToolImplementation {
   *                     x: 'center',
   *                     y: 'center'
   *                 },
-  *                 items: [  *                     {                        
+  *                 items: [  
+  *                     {                        
   *                         content: "Hurray5",
   *                         title: "Woot-"
   *                     },
@@ -202,7 +209,8 @@ interface DrawingToolImplementation {
   *     },
   *     //...
   * }
-  *```
+  * ```
+  * 
   */
   tooltips?: (args: DrawingArgs) => readonly DrawingTooltip[];
 }
@@ -235,26 +243,29 @@ interface DrawingToolImplementation {
 type CoordinateRestraint = number | [number, number];
 
 /**
- * An object with an `x` or `y` field that describes the {@link CoordinateRestraint} for a Custom Drawing Tool's Anchor.
- * Ex:
+ * An object with an `x` and/or `y` field that describes the {@link CoordinateRestraint} for a Custom Drawing Tool's Anchor at the 
+ * matching array position.  
+ * 
  * ```js
  * 
  *  const MyCustomTool = {
  *      //...
  * 
- *      //a drawing tool with these retraints can move 2 units in the Y axis and 14 units in the X axis
+ *      //the anchor at position [0] can move 2 units in the Y axis and the 
+ *      //anchor at position [1] can move 14 units in the X axis
  *      anchorRestraints() {
  *          return [{y: 2}, {x: 14}]
  *      },
  * 
- *      //a drawing tool with these restraints can move between the 4525 and 4535 price in the Y axis
+ *      //the anchor at position [0] can move between the 4525 and 4535 price in the Y axis
  *      anchorRestraints() {
  *          return [{y: [4525, 4535]}]
  *      },
  * 
  *      //...
  *  }  
- * ``` 
+ * ```
+ * 
  */
 interface AnchorRestraint {
     readonly x?: CoordinateRestraint;
@@ -263,7 +274,7 @@ interface AnchorRestraint {
 
 /**
  * Interface describing the style of a given Anchor.
- * Ex:
+ * 
  * ```js
  *  const MyCustomTool = {
  *      //...
@@ -276,6 +287,7 @@ interface AnchorRestraint {
  *      //...
  *  }
  * ```
+ * 
  */
 interface AnchorStyle {
     /** Color of the anchor. */
