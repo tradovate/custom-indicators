@@ -267,8 +267,8 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in
-								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L234">
-									drawing-tool.d.ts:234
+								<a href="https://github.com/tradovate/custom-indicators/tree/master/typescript/drawing-tool.d.ts#L235">
+									drawing-tool.d.ts:235
 								</a>
 							</li>
 						</ul>
@@ -277,27 +277,25 @@
 						<div class="lead">
 							<p>A number or pair of numbers that describe the limits of a coordinate. If this is a single number, describes the number of units that are valid
 								for a coordinate in the given axis. If this is an array pair of numbers, describes the <code>[min, max]</code> absolute coordinate values that are valid
-								for the given axis.
-								Ex:
-							```js</p>
+							for the given axis.</p>
 						</div>
 						</div><div class="tsd-comment tsd-typography tsd-comment-text">
-						<p> const MyCustomTool = {
-						//...</p>
-						<pre><code><span style="color: #000000"> </span><span style="color: #008000">//a drawing tool with these retraints can move plus or minus 2 units in the Y axis and plus or minus 14 units in the X axis</span>
-<span style="color: #000000"> </span><span style="color: #795E26">anchorRestraints</span><span style="color: #000000">() {</span>
-<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000"> [{</span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">}, {</span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #098658">14</span><span style="color: #000000">}]</span>
-<span style="color: #000000"> },</span>
+						<pre><code class="language-js">
+<span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">MyCustomTool</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">     </span><span style="color: #008000">//...</span>
 
-<span style="color: #000000"> </span><span style="color: #008000">//a drawing tool with these restraints can move between the 4525 and 4535 price in the Y axis</span>
-<span style="color: #000000"> </span><span style="color: #795E26">anchorRestraints</span><span style="color: #000000">() {</span>
-<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000"> [{</span><span style="color: #001080">y:</span><span style="color: #000000"> [</span><span style="color: #098658">4525</span><span style="color: #000000">, </span><span style="color: #098658">4535</span><span style="color: #000000">]}]</span>
+<span style="color: #000000">     </span><span style="color: #008000">//a drawing tool with these retraints can move plus or minus 2 units in the Y axis and plus or minus 14 units in the X axis</span>
+<span style="color: #000000">     </span><span style="color: #795E26">anchorRestraints</span><span style="color: #000000">() {</span>
+<span style="color: #000000">         </span><span style="color: #AF00DB">return</span><span style="color: #000000"> [{</span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">}, {</span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #098658">14</span><span style="color: #000000">}]</span>
+<span style="color: #000000">     },</span>
+
+<span style="color: #000000">     </span><span style="color: #008000">//a drawing tool with these restraints can move between the 4525 and 4535 price in the Y axis</span>
+<span style="color: #000000">     </span><span style="color: #795E26">anchorRestraints</span><span style="color: #000000">() {</span>
+<span style="color: #000000">         </span><span style="color: #AF00DB">return</span><span style="color: #000000"> [{</span><span style="color: #001080">y:</span><span style="color: #000000"> [</span><span style="color: #098658">4525</span><span style="color: #000000">, </span><span style="color: #098658">4535</span><span style="color: #000000">]}]</span>
+<span style="color: #000000">     }</span>
+
+<span style="color: #000000">     </span><span style="color: #008000">//...</span>
 <span style="color: #000000"> }</span>
-
-<span style="color: #000000"> </span><span style="color: #008000">//...</span>
-</code></pre>
-						<p> }</p>
-						<pre><code>
 </code></pre>
 					</div>
 			</section></section>

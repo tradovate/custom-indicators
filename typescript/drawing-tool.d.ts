@@ -211,7 +211,7 @@ interface DrawingToolImplementation {
  * A number or pair of numbers that describe the limits of a coordinate. If this is a single number, describes the number of units that are valid
  * for a coordinate in the given axis. If this is an array pair of numbers, describes the `[min, max]` absolute coordinate values that are valid 
  * for the given axis.
- * Ex:
+ * 
  * ```js
  * 
  *  const MyCustomTool = {
@@ -229,7 +229,8 @@ interface DrawingToolImplementation {
  * 
  *      //...
  *  }  
- * ``` 
+ * ```
+ * 
  */
 type CoordinateRestraint = number | [number, number];
 
