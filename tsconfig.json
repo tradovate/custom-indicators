@@ -88,6 +88,10 @@
             {
                 "title": "Alligator",
                 "source": "Alligator.md"
+            },
+            {
+                "title": "Custom Drawing Tools",
+                "source": "DrawingTools.md"
             }
           ]
         }
