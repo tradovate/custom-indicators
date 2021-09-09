@@ -52,6 +52,8 @@ as defined by the end user. We will use boolean result to determine whether or n
 Now let's build our calculator - the class that will ultimately represent our indicator.
 
 ```javascript
+const {px, du, op} = require('./tools/graphics')
+
 class SubstantialGain {
     init() {
         this.tracker = MyTracker(this.props.magicNumber)
@@ -91,8 +93,7 @@ module.exports = {
 
 We first must initialize our tracker tool. We do so in the `init` function of our calculator, leveraging our module's `props`.
 In the `map` function, we use our tracker tool to get a boolean value for the bar currently being drawn. Finally in the return 
-object of our `map`, we can add our first graphics item. This particular object is a {@linkcode Text} object. If we were to select 
-our Substantial Gains indicator and supply it with a (reasonable) magic number, we should see some greenish exclamation points 
+object of our `map`, we can add our first graphics item. This particular object is a {@linkcode Text} object. Also, look closely at the `point` field of our Text graphics item. We have to declare the point as a ScaleBound value, so we will use the special helper operators `op`, `du`, and `px`. `px` allows us to declare a value in the pixel unit-space, while `du` utilizes Domain Units. In the X axis, this is the bar index. In the Y axis, domain units are the price of the stock. The `op` function is special - it allows us to operate on `px` and `du` values interchangeably. So we can do things like add absolute pixel values to domain unit values if we want (and we have done exactly that in the example code!). If we were to select our Substantial Gains indicator and supply it with a (reasonable) magic number, we should see some greenish exclamation points 
 rendered over some of our chart's bars.  
 
 That's a great start, but we have substantially more power at our disposal. Let's start by 
