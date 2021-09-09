@@ -92,6 +92,10 @@
             {
                 "title": "Custom Drawing Tools",
                 "source": "DrawingTools.md"
+            },
+            {
+                "title": "ScaleBound Values",
+                "source": "ScaleBoundValues.md"
             }
           ]
         }
