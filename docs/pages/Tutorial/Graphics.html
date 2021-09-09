@@ -243,7 +243,9 @@
 					UI parameters. The <code>push</code> function will return true if the difference is greater than or equal to the magic number, indicating a &#39;substantial gain&#39;,
 				as defined by the end user. We will use boolean result to determine whether or not to render a graphic at the point of &#39;substantial gain&#39;.  </p>
 				<p>Now let&#39;s build our calculator - the class that will ultimately represent our indicator.</p>
-				<pre><code class="language-javascript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">SubstantialGain</span><span style="color: #000000"> {</span>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> {</span><span style="color: #0070C1">px</span><span style="color: #000000">, </span><span style="color: #0070C1">du</span><span style="color: #000000">, </span><span style="color: #0070C1">op</span><span style="color: #000000">} = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;./tools/graphics&#039;</span><span style="color: #000000">)</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">SubstantialGain</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #795E26">init</span><span style="color: #000000">() {</span>
 <span style="color: #000000">        </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">tracker</span><span style="color: #000000"> = </span><span style="color: #795E26">MyTracker</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">props</span><span style="color: #000000">.</span><span style="color: #001080">magicNumber</span><span style="color: #000000">)</span>
 <span style="color: #000000">    }</span>
@@ -281,8 +283,7 @@
 </code></pre>
 				<p>We first must initialize our tracker tool. We do so in the <code>init</code> function of our calculator, leveraging our module&#39;s <code>props</code>.
 					In the <code>map</code> function, we use our tracker tool to get a boolean value for the bar currently being drawn. Finally in the return
-					object of our <code>map</code>, we can add our first graphics item. This particular object is a <a href="../../interfaces/graphics_displayobject.text.html"><code>Text</code></a> object. If we were to select
-					our Substantial Gains indicator and supply it with a (reasonable) magic number, we should see some greenish exclamation points
+					object of our <code>map</code>, we can add our first graphics item. This particular object is a <a href="../../interfaces/graphics_displayobject.text.html"><code>Text</code></a> object. Also, look closely at the <code>point</code> field of our Text graphics item. We have to declare the point as a ScaleBound value, so we will use the special helper operators <code>op</code>, <code>du</code>, and <code>px</code>. <code>px</code> allows us to declare a value in the pixel unit-space, while <code>du</code> utilizes Domain Units. In the X axis, this is the bar index. In the Y axis, domain units are the price of the stock. The <code>op</code> function is special - it allows us to operate on <code>px</code> and <code>du</code> values interchangeably. So we can do things like add absolute pixel values to domain unit values if we want (and we have done exactly that in the example code!). If we were to select our Substantial Gains indicator and supply it with a (reasonable) magic number, we should see some greenish exclamation points
 				rendered over some of our chart&#39;s bars.  </p>
 				<p>That&#39;s a great start, but we have substantially more power at our disposal. Let&#39;s start by
 				making our graphic a bit more complex. Within our <code>items</code> array, let&#39;s add another <a href="../../modules/graphics_graphicsresponse.html#graphicsobject"><code>GraphicsObject</code></a>.</p>
