@@ -8,8 +8,8 @@ const MyLine = {
 }
 
 module.exports = {
-    name: 'ThreePointTool',                         //a unique identifier for the tool
-    description: 'Three Point Tool',                //the UI displayed name of the tool
+    name: 'MyLine',                         //a unique identifier for the tool
+    description: 'My Line',                //the UI displayed name of the tool
     drawing: MyLine,                                //the object that implements DrawingToolImplementation
     params: {                                       //like indicators, these are user defined parameters
         maxPeriod: predef.paramSpecs.period(14)
