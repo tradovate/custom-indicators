@@ -96,6 +96,10 @@
             {
                 "title": "ScaleBound Values",
                 "source": "ScaleBoundValues.md"
+            },
+            {
+                "title": "Advanced Drawing Tools",
+                "source": "AdvancedDrawing.md"
             }
           ]
         }

@@ -192,15 +192,19 @@ interface DrawingToolImplementation {
   *                 items: [  
   *                     {                        
   *                         content: "Hurray5",
+  *                         key: 'hurray',
   *                         title: "Woot-"
   *                     },
   *                     {
+  *                         key: 'date',
   *                         content: new Date()
   *                     },
   *                     {
+  *                         key: 'number',
   *                         content: 500
   *                     },
   *                     {
+  *                         key: 'delta',
   *                         content: {delta: anchors[1].y.value - anchors[0].y.value}
   *                     }
   *                 ]
