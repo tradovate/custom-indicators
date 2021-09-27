@@ -37,13 +37,11 @@ module.exports = {
     },
     maxN: 3
 }
-
 ```
 
 We can define the our drawing tool as a simple object. The `Trender` object contains the drawing implementation methods that we will need to utilize. We can then use that object as our `drawing` field in the `module.exports` portion of the file. Some other notable portions of the `module.exports` object include the `params` field, our user defined parameters, and `maxN` which lets us define how many anchors our tool can have. Now we can begin filling out our drawing implementation methods. Don't forget about the `require`s at the top - we will need those later. For now, let's focus on `render`. We will start by rendering a simple line.
 
 ```js
-
 const Trender = {
     //...
 
@@ -71,7 +69,6 @@ const Trender = {
 
     //...
 }
-
 ```
 
 If we try this, it should produce a line from the first anchor to the second anchor in the `props.lower` color (which defaults to reddish). But what we really want are three lines. We can use the third anchor to determine the height of our trend channel. Let's add a top line based on the third anchor.
@@ -121,7 +118,6 @@ const Trender = {
 
     //...
 }
-
 ```
 
 Now we're getting somewhere. But we still want to have a midpoint line as well. We can use the same `upperDiff` again, divided in half, to find the midpoint line of our channel:
@@ -167,12 +163,11 @@ const Trender = {
 
     //...
 }
-
 ```
 
 Our drawing is basically complete. You should have something that looks like this:
 
-![Our Trend channel in action.`](../../media/AdvancedDrawings1.png)
+![Our Trend channel in action.](../../media/AdvancedDrawings1.png)
 
 But when you hold `SHIFT` over this drawing, we get no information. That's because we haven't drawn any tooltips yet. Luckily, drawing tooltips is just as easy as defining a render function. Let's draw a tooltip for the price-point at `anchors[0]`.
 
@@ -202,7 +197,6 @@ const Trender = {
     
     //...
 }
-
 ```
 
 We should add a tooltip for the prices at each of the corners of our tool. Let's write another tooltip for `anchors[1]` that includes both the price-point, and the tick-delta between `anchors[0]` and `anchors[1]`. To get the tick delta, we'll need to track some differences between points that we have defined and their absolute values as well.
@@ -248,7 +242,6 @@ const Trender = {
 
     //...
 }
-
 ```
 
 Notice that we have some runtime variance here. Based on whether the `deltaARaw` value is positive or negative, we will render different text based on what that price point and tick delta represent. In this case it is the point at `anchors[1]`, so the lower right corner. This is either the minimum long value of the trend or the maximum short value of the trend. 
@@ -299,12 +292,11 @@ const Trender = {
         ]
     }
 }
-
 ```
 
 We have to be a little creative about the `coord` field for the midpoint. I've used the `du` graphics helper function (which we `require`d at the top of the file) to create the `y` coordinate. This is because all of the values we use must be `ScaleBound` values. These are simple objects which have both a `unit` field and a `value` field. We can construct them in a less verbose way by using `du`.
 
-> `du` stands for Domain Units. There is also the `px` method which constructs ScaleBound values with the Pixels type unit.
+> *Note: `du` stands for Domain Units. There is also the `px` method which constructs ScaleBound values with the Pixels type unit.*
 
 We still need to finish filling out our tooltips. Let's finish them off by adding the top-left and top-right points.
 
@@ -370,5 +362,8 @@ const Trender = {
         ]
     }
 }
-
 ```
+
+Now when we hold `SHIFT` over our drawing, we should see some actually useful information. Try it:
+
+![Hold SHIFT to see our tooltips.](../../media/AdvancedDrawings2.png)

@@ -245,11 +245,9 @@
 <span style="color: #000000">    },</span>
 <span style="color: #000000">    </span><span style="color: #001080">maxN:</span><span style="color: #000000"> </span><span style="color: #098658">3</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>We can define the our drawing tool as a simple object. The <code>Trender</code> object contains the drawing implementation methods that we will need to utilize. We can then use that object as our <code>drawing</code> field in the <code>module.exports</code> portion of the file. Some other notable portions of the <code>module.exports</code> object include the <code>params</code> field, our user defined parameters, and <code>maxN</code> which lets us define how many anchors our tool can have. Now we can begin filling out our drawing implementation methods. Don&#39;t forget about the <code>require</code>s at the top - we will need those later. For now, let&#39;s focus on <code>render</code>. We will start by rendering a simple line.</p>
-				<pre><code class="language-js">
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Trender</span><span style="color: #000000"> = {</span>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Trender</span><span style="color: #000000"> = {</span>
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 
 <span style="color: #000000">    </span><span style="color: #795E26">render</span><span style="color: #000000">({</span><span style="color: #001080">anchors</span><span style="color: #000000">, </span><span style="color: #001080">props</span><span style="color: #000000">}) {</span>
@@ -276,7 +274,6 @@
 
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>If we try this, it should produce a line from the first anchor to the second anchor in the <code>props.lower</code> color (which defaults to reddish). But what we really want are three lines. We can use the third anchor to determine the height of our trend channel. Let&#39;s add a top line based on the third anchor.</p>
 				<pre><code class="language-js">
@@ -323,7 +320,6 @@
 
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>Now we&#39;re getting somewhere. But we still want to have a midpoint line as well. We can use the same <code>upperDiff</code> again, divided in half, to find the midpoint line of our channel:</p>
 				<pre><code class="language-js">
@@ -366,10 +362,9 @@
 
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>Our drawing is basically complete. You should have something that looks like this:</p>
-				<p>![Our Trend channel in action.`](../../media/AdvancedDrawings1.png)</p>
+				<p><img src="../../media/AdvancedDrawings1.png" alt="Our Trend channel in action."></p>
 				<p>But when you hold <code>SHIFT</code> over this drawing, we get no information. That&#39;s because we haven&#39;t drawn any tooltips yet. Luckily, drawing tooltips is just as easy as defining a render function. Let&#39;s draw a tooltip for the price-point at <code>anchors[0]</code>.</p>
 				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Trender</span><span style="color: #000000"> = {</span>
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
@@ -396,7 +391,6 @@
 
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>We should add a tooltip for the prices at each of the corners of our tool. Let&#39;s write another tooltip for <code>anchors[1]</code> that includes both the price-point, and the tick-delta between <code>anchors[0]</code> and <code>anchors[1]</code>. To get the tick delta, we&#39;ll need to track some differences between points that we have defined and their absolute values as well.</p>
 				<pre><code class="language-js">
@@ -439,7 +433,6 @@
 
 <span style="color: #000000">    </span><span style="color: #008000">//...</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>Notice that we have some runtime variance here. Based on whether the <code>deltaARaw</code> value is positive or negative, we will render different text based on what that price point and tick delta represent. In this case it is the point at <code>anchors[1]</code>, so the lower right corner. This is either the minimum long value of the trend or the maximum short value of the trend. </p>
 				<p>In order to implement the midpoint and upper points, we will need a value for the vertical delta. Let&#39;s add that to our defined variables and add another tooltip for the midpoint price point and tick delta:</p>
@@ -486,11 +479,10 @@
 <span style="color: #000000">        ]</span>
 <span style="color: #000000">    }</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
 				<p>We have to be a little creative about the <code>coord</code> field for the midpoint. I&#39;ve used the <code>du</code> graphics helper function (which we <code>require</code>d at the top of the file) to create the <code>y</code> coordinate. This is because all of the values we use must be <code>ScaleBound</code> values. These are simple objects which have both a <code>unit</code> field and a <code>value</code> field. We can construct them in a less verbose way by using <code>du</code>.</p>
 				<blockquote>
-					<p><code>du</code> stands for Domain Units. There is also the <code>px</code> method which constructs ScaleBound values with the Pixels type unit.</p>
+					<p><em>Note: <code>du</code> stands for Domain Units. There is also the <code>px</code> method which constructs ScaleBound values with the Pixels type unit.</em></p>
 				</blockquote>
 				<p>We still need to finish filling out our tooltips. Let&#39;s finish them off by adding the top-left and top-right points.</p>
 				<pre><code class="language-js">
@@ -554,8 +546,9 @@
 <span style="color: #000000">        ]</span>
 <span style="color: #000000">    }</span>
 <span style="color: #000000">}</span>
-
 </code></pre>
+				<p>Now when we hold <code>SHIFT</code> over our drawing, we should see some actually useful information. Try it:</p>
+				<p><img src="../../media/AdvancedDrawings2.png" alt="Hold SHIFT to see our tooltips."></p>
 			</div>
 			<!--{&quot;options&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;tsconfig&quot;:&quot;c:\\work\\custom-indicators&quot;,&quot;entryPoints&quot;:[&quot;./typescript/indicator.d.ts&quot;,&quot;./typescript/drawing-tool.d.ts&quot;,&quot;./typescript/calculator.d.ts&quot;,&quot;./typescript/params.d.ts&quot;,&quot;./typescript/dlls.d.ts&quot;,&quot;./typescript/plots.d.ts&quot;,&quot;./typescript/plotter.d.ts&quot;,&quot;./typescript/canvas.d.ts&quot;,&quot;./typescript/scaler.d.ts&quot;,&quot;./typescript/scheme-styles.d.ts&quot;,&quot;./typescript/TimeSeries.d.ts&quot;,&quot;./typescript/graphics/GraphicsResponse.d.ts&quot;,&quot;./typescript/graphics/DisplayObject.d.ts&quot;,&quot;./typescript/graphics/Scale.d.ts&quot;,&quot;./typescript/graphics/Style.d.ts&quot;,&quot;./typescript/Shifts.d.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;tutorial/media&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-loopingz-theme/bin/default&quot;,&quot;name&quot;:&quot;Tradovate Custom Indicators&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./tutorial/index.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false,&quot;outline&quot;:[],&quot;source&quot;:[{&quot;path&quot;:&quot;https://github.com/tradovate/custom-indicators/tree/master/typescript/&quot;,&quot;line&quot;:&quot;L&quot;}],&quot;excludeReferences&quot;:true,&quot;pages&quot;:{&quot;groups&quot;:[{&quot;title&quot;:&quot;Tutorial&quot;,&quot;source&quot;:&quot;./tutorial/&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Introduction&quot;,&quot;source&quot;:&quot;index.md&quot;},{&quot;title&quot;:&quot;Simple Price Offset&quot;,&quot;source&quot;:&quot;SimplePriceOffset.md&quot;},{&quot;title&quot;:&quot;Parameterized Price Offset&quot;,&quot;source&quot;:&quot;ParameterizedPriceOffset.md&quot;},{&quot;title&quot;:&quot;Exponential Moving Average&quot;,&quot;source&quot;:&quot;ExponentialMovingAverage.md&quot;},{&quot;title&quot;:&quot;Human-friendlier EMA&quot;,&quot;source&quot;:&quot;HumanFriendlierEMA.md&quot;},{&quot;title&quot;:&quot;Built-in tools&quot;,&quot;source&quot;:&quot;BuiltinTools.md&quot;},{&quot;title&quot;:&quot;Double EMA&quot;,&quot;source&quot;:&quot;DoubleEMA.md&quot;},{&quot;title&quot;:&quot;Plotters&quot;,&quot;source&quot;:&quot;Plotters.md&quot;},{&quot;title&quot;:&quot;Signaling Average True Range&quot;,&quot;source&quot;:&quot;SignalingATR.md&quot;},{&quot;title&quot;:&quot;Blackbox DLL&quot;,&quot;source&quot;:&quot;BlackboxDLL.md&quot;},{&quot;title&quot;:&quot;Fourier Moving Average&quot;,&quot;source&quot;:&quot;FourierMovingAverage.md&quot;},{&quot;title&quot;:&quot;Spectrogram&quot;,&quot;source&quot;:&quot;Spectrogram.md&quot;},{&quot;title&quot;:&quot;Graphics&quot;,&quot;source&quot;:&quot;Graphics.md&quot;},{&quot;title&quot;:&quot;Alligator&quot;,&quot;source&quot;:&quot;Alligator.md&quot;},{&quot;title&quot;:&quot;Custom Drawing Tools&quot;,&quot;source&quot;:&quot;DrawingTools.md&quot;},{&quot;title&quot;:&quot;ScaleBound Values&quot;,&quot;source&quot;:&quot;ScaleBoundValues.md&quot;},{&quot;title&quot;:&quot;Advanced Drawing Tools&quot;,&quot;source&quot;:&quot;AdvancedDrawing.md&quot;}]}],&quot;reflectionNavigationTitle&quot;:&quot;Modules&quot;,&quot;useMarkdownTitle&quot;:true,&quot;enableSearch&quot;:false,&quot;listInvalidPageLinks&quot;:true}}-->
 			<footer class="with-border-bottom">
