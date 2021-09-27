@@ -1,9 +1,9 @@
 # Advanced Custom Drawing Tools
 ## Creating a Trend-Line Tool
 
-Because we can do whatever we want with JavaScript, we have a huge amount of freedom when developing our own custom drawing tools. This allows us to use advanced math, place graphics arbitrarily, and even add tooltips that contain custom calculations. In this article, I'll walk through creating a simple Trend-Line drawing tool.
+Because we can do whatever we want with JavaScript, we have a huge amount of freedom when developing our own custom drawing tools. This allows us to use advanced math, place graphics arbitrarily, and even add tooltips that contain custom calculations. In this article, I'll demonstrate what we can accomplish with the Custom Drawing module by walking through the creation of a simple Trend-Line drawing tool.
 
-Let's will begin by building a template for our drawing tool.
+Let's begin by building a template for our drawing tool:
 
 ```js
 const predef = require("./tools/predef")
@@ -39,7 +39,7 @@ module.exports = {
 }
 ```
 
-We can define the our drawing tool as a simple object. The `Trender` object contains the drawing implementation methods that we will need to utilize. We can then use that object as our `drawing` field in the `module.exports` portion of the file. Some other notable portions of the `module.exports` object include the `params` field, our user defined parameters, and `maxN` which lets us define how many anchors our tool can have. Now we can begin filling out our drawing implementation methods. Don't forget about the `require`s at the top - we will need those later. For now, let's focus on `render`. We will start by rendering a simple line.
+First, notice we've brought a few methods and objects into scope with `require`. We will need We can define the our drawing tool as a simple object. The `Trender` object contains the drawing implementation methods that we will need to utilize. We can then use that object as our `drawing` field in the `module.exports` portion of the file. Some other notable portions of the `module.exports` object include the `params` field, our user defined parameters, and `maxN` which lets us define how many anchors our tool can have. In this case we want three anchors, which I'll explain as we go on. We can begin filling out our drawing implementation methods at this point. For now, let's focus on the `render` method. We will start by rendering a simple line:
 
 ```js
 const Trender = {
@@ -71,10 +71,9 @@ const Trender = {
 }
 ```
 
-If we try this, it should produce a line from the first anchor to the second anchor in the `props.lower` color (which defaults to reddish). But what we really want are three lines. We can use the third anchor to determine the height of our trend channel. Let's add a top line based on the third anchor.
+If we try this, it should produce a line from the first anchor to the second anchor in the `props.lower` color (which defaults to reddish). But what we really want are three lines - an upper line, a lower line, and a midpoint line. We can use the third anchor to determine the height of our trend channel. Let's add a top line based on the third anchor:
 
 ```js
-
 const Trender = {
     //...
 
@@ -120,7 +119,7 @@ const Trender = {
 }
 ```
 
-Now we're getting somewhere. But we still want to have a midpoint line as well. We can use the same `upperDiff` again, divided in half, to find the midpoint line of our channel:
+ Now we're getting somewhere. Notice that we've used ternary expressions to determine the `a` and `b` points for the line drawings. This is because trying to read the `x` or `y` fields of an anchor when it is null will produce an error and mess up how the drawing renders, and it allows us to default to the zeroth anchor before `anchors[1]` or `anchors[2]` exist. You'll notice this pattern of defaulting to a known existing value often. But we still want to have a midpoint line as well. We can use the same `upperDiff` again, divided in half, to find the midpoint line of our channel:
 
 ```js
 
@@ -214,7 +213,7 @@ const Trender = {
         return [
             //...
             {
-                coord: anchors[1],
+                coord: anchors[1] || anchors[0],
                 alignment: {
                     tag: 'predef',
                     x: 'right',
@@ -224,7 +223,7 @@ const Trender = {
                     //price-point
                     {
                         key: 'a1',
-                        content: anchors[1].y.value
+                        content: anchors[1] ? anchors[1].y.value : 0
                     },
                     //tick delta
                     {
@@ -262,10 +261,13 @@ const Trender = {
         return [
             //...
             {
-                coord: {
-                    x: anchors[1].x,
-                    y: du(anchors[1].y.value + deltaB/2)
-                },
+                coord: 
+                    anchors[1] 
+                    ? {
+                        x: anchors[1].x,
+                        y: du(anchors[1].y.value + deltaB/2)
+                    }
+                    : anchors[0],
                 alignment: {
                     tag: 'predef',
                     x: 'right',
@@ -274,7 +276,7 @@ const Trender = {
                 items: [
                     {
                         key: 'a2.5',
-                        content: anchors[1].y.value + deltaB/2
+                        content: anchors[1] ? anchors[1].y.value + deltaB/2 : 0
                     },
                     {
                         title: 
@@ -315,10 +317,13 @@ const Trender = {
             //...
             //top left
             {
-                coord: {
-                    x: du(anchors[1].x.value),
-                    y: du(anchors[1].y.value + deltaB)
-                },
+                coord: 
+                    anchors[1] 
+                    ? {
+                        x: du(anchors[1].x.value),
+                        y: du(anchors[1].y.value + deltaB)
+                    }
+                    : anchors[0],
                 alignment: {
                     tag: 'predef',
                     x: 'right',
@@ -328,7 +333,7 @@ const Trender = {
                     //price
                     {
                         key: 'a1.5',
-                        content: anchors[1].y.value + deltaB
+                        content: anchors[1] ? anchors[1].y.value + deltaB : 0
                     },
                     //delta
                     {
@@ -346,7 +351,7 @@ const Trender = {
             },
             //top right
             {
-                coord: { x: anchors[0].x, y: anchors[2].y },
+                coord: anchors[2] ? { x: anchors[0].x, y: anchors[2].y } : anchors[0],
                 alignment: {
                     tag: 'predef',
                     x: 'center',
@@ -355,7 +360,7 @@ const Trender = {
                 items: [
                     {
                         key: 'a2',
-                        content: anchors[2].y.value
+                        content: anchors[2] ? anchors[2].y.value : 0
                     }
                 ]
             }
