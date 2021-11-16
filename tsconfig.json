@@ -70,10 +70,6 @@
               "source": "SignalingATR.md"
             },
             {
-              "title": "Blackbox DLL",
-              "source": "BlackboxDLL.md"
-            },
-            {
               "title": "Fourier Moving Average",
               "source": "FourierMovingAverage.md"
             },
