@@ -102,7 +102,7 @@ making our graphic a bit more complex. Within our `items` array, let's add anoth
 ```javascript
 //...
 {
-    tag: "ContourShapes",
+    tag: "Shapes",
     key: 'circs',
     primitives: [
         {
@@ -115,8 +115,7 @@ making our graphic a bit more complex. Within our `items` array, let's add anoth
         },
         
     ],
-    lineStyle: {
-        lineWidth: 2,
+    fillStyle: {
         color: "#5c5"
     }
 },
