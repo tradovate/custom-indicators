@@ -52,6 +52,9 @@ as defined by the end user. We will use boolean result to determine whether or n
 Now let's build our calculator - the class that will ultimately represent our indicator.
 
 ```javascript
+const { op, px, du } = require('./tools/graphics')
+const predef = require('./tools/predef')
+
 class SubstantialGain {
     init() {
         this.tracker = MyTracker(this.props.magicNumber)
@@ -77,6 +80,7 @@ class SubstantialGain {
             }
         }
     }
+}
 
 module.exports = {
     name: "substantialGain",
@@ -101,7 +105,7 @@ making our graphic a bit more complex. Within our `items` array, let's add anoth
 ```javascript
 //...
 {
-    tag: "ContourShapes",
+    tag: "Shapes",
     key: 'circs',
     primitives: [
         {
@@ -114,8 +118,7 @@ making our graphic a bit more complex. Within our `items` array, let's add anoth
         },
         
     ],
-    lineStyle: {
-        lineWidth: 2,
+    fillStyle: {
         color: "#5c5"
     }
 },
