@@ -81,7 +81,6 @@ class SubstantialGain {
                                     }
                                 ],
                                 fillStyle: {
-                                    // lineWidth: 2,
                                     color: '#5b5'
                                 }
                             }

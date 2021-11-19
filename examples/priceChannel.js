@@ -85,7 +85,7 @@ const Trender = {
 
     tooltips({anchors, props}) {
         const deltaARaw = anchors[1] ? anchors[0].y.value - anchors[1].y.value : 0,
-              deltaBRaw = anchors[2] ? anchors[2].y.value - anchors[0].y.value : 0,
+              deltaBRaw = anchors[2] ? anchors[2].y.value - anchors[1].y.value : 0,
               deltaA    = Math.abs(deltaARaw),
               deltaB    = Math.abs(deltaBRaw)
               
@@ -194,7 +194,7 @@ const Trender = {
             },
             //top right
             {
-                coord: anchors[2] ? { x: anchors[0].x, y: anchors[2].y } : anchors[0],
+                coord: anchors[2] ? { x: anchors[0].x, y: du(anchors[2].y.value - deltaA) } : anchors[0],
                 alignment: {
                     tag: 'predef',
                     x: 'center',
@@ -203,14 +203,15 @@ const Trender = {
                 items: [
                     {
                         key: 'a2',
-                        content: anchors[2] ? anchors[2].y.value : 0
+                        content: anchors[2] ? anchors[2].y.value - deltaA : 0
                     }
                 ]
             }
         ]
     },
     anchorRestraints({anchors}) {
-        return [ {}, {x: 0}, {x: [anchors[1].x.value, anchors[1].x.value] } ]    
+        const anch1 =  anchors[2] ? 0 : 1000 
+        return [ {}, {x: anch1},{x: [anchors[1].x.value, anchors[1].x.value] } ]    
     },
 
     anchorStyles({props}) {
