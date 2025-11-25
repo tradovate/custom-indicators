@@ -49,7 +49,7 @@ export interface BooleanParameterDefinition {
 
 export interface TextParameterDefinition {
     readonly type: 'text';
-    readonly def: boolean;
+    readonly def: string;
 }
 
 export interface EnumParameterDefinition {
